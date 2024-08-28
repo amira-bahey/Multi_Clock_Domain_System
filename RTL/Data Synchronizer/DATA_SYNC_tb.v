@@ -56,7 +56,7 @@ initial
  task source_enable;
   begin
    bus_enable_tb='b1;
-   #(4)*clock_period)
+   #(4*clock_period)
    bus_enable_tb='b0;
   end
  endtask   
@@ -76,7 +76,7 @@ initial
   endtask
 always #(clock_period/2) CLK_tb=~CLK_tb;
 
-data_synchronizer #(.BUS_WIDTH(BUS_WIDTH_tb)) dut(
+data_synchronizer #(.data_width(BUS_WIDTH_tb)) dut(
 .unsync_bus(unsync_bus_tb),
 .bus_enable(bus_enable_tb),
 .CLK(CLK_tb),
