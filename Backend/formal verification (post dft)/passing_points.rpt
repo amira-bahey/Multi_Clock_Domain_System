@@ -1,0 +1,942 @@
+**************************************************
+Report         : passing_points
+
+Reference      : Ref:/WORK/system_top_dft
+Implementation : Imp:/WORK/system_top_dft
+Version        : L-2016.03-SP1
+Date           : Mon Aug 26 17:56:21 2024
+**************************************************
+
+302 Passing compare points:
+
+  Ref  LAT        Ref:/WORK/system_top_dft/U3/U0_TLATNCAX12M
+  Impl LAT        Imp:/WORK/system_top_dft/U3/U0_TLATNCAX12M
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[10]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[10]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[11]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[11]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[12]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[12]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[13]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[13]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[14]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[14]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[15]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[15]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[4]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[5]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[6]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[7]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[8]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[8]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[9]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/ALU_OUT_reg_reg[9]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/Address_reg_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/Address_reg_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/Address_reg_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/Address_reg_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/Address_reg_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/Address_reg_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/Address_reg_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/Address_reg_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/current_state_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/current_state_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/current_state_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/current_state_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/current_state_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/current_state_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U0/current_state_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U0/current_state_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/RdData_Valid_reg
+  Impl DFF        Imp:/WORK/system_top_dft/U1/RdData_Valid_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/RdData_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/RdData_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/RdData_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/RdData_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/RdData_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/RdData_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/RdData_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/RdData_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/RdData_reg[4]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/RdData_reg[4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/RdData_reg[5]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/RdData_reg[5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/RdData_reg[6]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/RdData_reg[6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/RdData_reg[7]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/RdData_reg[7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[0][0]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[0][0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[0][1]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[0][1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[0][2]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[0][2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[0][3]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[0][3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[0][4]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[0][4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[0][5]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[0][5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[0][6]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[0][6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[0][7]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[0][7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[1][0]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[1][0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[1][1]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[1][1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[1][2]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[1][2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[1][3]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[1][3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[1][4]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[1][4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[1][5]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[1][5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[1][6]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[1][6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[1][7]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[1][7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[2][0]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[2][0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[2][1]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[2][1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[2][2]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[2][2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[2][3]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[2][3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[2][4]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[2][4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[2][5]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[2][5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[2][6]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[2][6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[2][7]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[2][7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[3][0]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[3][0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[3][1]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[3][1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[3][2]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[3][2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[3][3]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[3][3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[3][4]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[3][4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[3][5]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[3][5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[3][6]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[3][6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[3][7]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[3][7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[4][0]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[4][0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[4][1]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[4][1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[4][2]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[4][2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[4][3]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[4][3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[4][4]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[4][4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[4][5]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[4][5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[4][6]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[4][6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[4][7]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[4][7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[5][0]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[5][0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[5][1]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[5][1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[5][2]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[5][2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[5][3]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[5][3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[5][4]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[5][4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[5][5]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[5][5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[5][6]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[5][6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[5][7]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[5][7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[6][0]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[6][0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[6][1]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[6][1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[6][2]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[6][2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[6][3]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[6][3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[6][4]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[6][4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[6][5]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[6][5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[6][6]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[6][6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[6][7]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[6][7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[7][0]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[7][0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[7][1]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[7][1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[7][2]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[7][2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[7][3]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[7][3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[7][4]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[7][4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[7][5]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[7][5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[7][6]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[7][6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U1/Reg_File_reg[7][7]
+  Impl DFF        Imp:/WORK/system_top_dft/U1/Reg_File_reg[7][7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U10/counter_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U10/counter_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U10/counter_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U10/counter_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U10/counter_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U10/counter_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U10/counter_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U10/counter_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U10/counter_reg[4]
+  Impl DFF        Imp:/WORK/system_top_dft/U10/counter_reg[4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U10/counter_reg[5]
+  Impl DFF        Imp:/WORK/system_top_dft/U10/counter_reg[5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U10/counter_reg[6]
+  Impl DFF        Imp:/WORK/system_top_dft/U10/counter_reg[6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U10/counter_reg[7]
+  Impl DFF        Imp:/WORK/system_top_dft/U10/counter_reg[7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U10/div_clk_reg
+  Impl DFF        Imp:/WORK/system_top_dft/U10/div_clk_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U10/flag_reg
+  Impl DFF        Imp:/WORK/system_top_dft/U10/flag_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U11/counter_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U11/counter_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U11/counter_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U11/counter_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U11/counter_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U11/counter_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U11/counter_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U11/counter_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U11/counter_reg[4]
+  Impl DFF        Imp:/WORK/system_top_dft/U11/counter_reg[4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U11/counter_reg[5]
+  Impl DFF        Imp:/WORK/system_top_dft/U11/counter_reg[5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U11/counter_reg[6]
+  Impl DFF        Imp:/WORK/system_top_dft/U11/counter_reg[6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U11/counter_reg[7]
+  Impl DFF        Imp:/WORK/system_top_dft/U11/counter_reg[7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U11/div_clk_reg
+  Impl DFF        Imp:/WORK/system_top_dft/U11/div_clk_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U11/flag_reg
+  Impl DFF        Imp:/WORK/system_top_dft/U11/flag_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U2/ALU_OUT_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U2/ALU_OUT_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U2/ALU_OUT_reg[10]
+  Impl DFF        Imp:/WORK/system_top_dft/U2/ALU_OUT_reg[10]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U2/ALU_OUT_reg[11]
+  Impl DFF        Imp:/WORK/system_top_dft/U2/ALU_OUT_reg[11]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U2/ALU_OUT_reg[12]
+  Impl DFF        Imp:/WORK/system_top_dft/U2/ALU_OUT_reg[12]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U2/ALU_OUT_reg[13]
+  Impl DFF        Imp:/WORK/system_top_dft/U2/ALU_OUT_reg[13]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U2/ALU_OUT_reg[14]
+  Impl DFF        Imp:/WORK/system_top_dft/U2/ALU_OUT_reg[14]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U2/ALU_OUT_reg[15]
+  Impl DFF        Imp:/WORK/system_top_dft/U2/ALU_OUT_reg[15]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U2/ALU_OUT_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U2/ALU_OUT_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U2/ALU_OUT_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U2/ALU_OUT_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U2/ALU_OUT_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U2/ALU_OUT_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U2/ALU_OUT_reg[4]
+  Impl DFF        Imp:/WORK/system_top_dft/U2/ALU_OUT_reg[4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U2/ALU_OUT_reg[5]
+  Impl DFF        Imp:/WORK/system_top_dft/U2/ALU_OUT_reg[5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U2/ALU_OUT_reg[6]
+  Impl DFF        Imp:/WORK/system_top_dft/U2/ALU_OUT_reg[6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U2/ALU_OUT_reg[7]
+  Impl DFF        Imp:/WORK/system_top_dft/U2/ALU_OUT_reg[7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U2/ALU_OUT_reg[8]
+  Impl DFF        Imp:/WORK/system_top_dft/U2/ALU_OUT_reg[8]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U2/ALU_OUT_reg[9]
+  Impl DFF        Imp:/WORK/system_top_dft/U2/ALU_OUT_reg[9]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U2/ALU_Valid_reg
+  Impl DFF        Imp:/WORK/system_top_dft/U2/ALU_Valid_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut0/F/busy_reg
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut0/F/busy_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut0/F/current_state_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut0/F/current_state_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut0/F/current_state_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut0/F/current_state_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut0/F/current_state_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut0/F/current_state_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut0/P/PAR_BIT_reg
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut0/P/PAR_BIT_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut0/S/counter_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut0/S/counter_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut0/S/counter_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut0/S/counter_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut0/S/counter_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut0/S/counter_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut0/S/counter_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut0/S/counter_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut0/S/mem_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut0/S/mem_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut0/S/mem_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut0/S/mem_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut0/S/mem_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut0/S/mem_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut0/S/mem_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut0/S/mem_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut0/S/mem_reg[4]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut0/S/mem_reg[4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut0/S/mem_reg[5]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut0/S/mem_reg[5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut0/S/mem_reg[6]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut0/S/mem_reg[6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut0/S/mem_reg[7]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut0/S/mem_reg[7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut0/S/ser_data_reg
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut0/S/ser_data_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut0/TX_OUT_reg
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut0/TX_OUT_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/D0/sample1_reg
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/D0/sample1_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/D0/sample2_reg
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/D0/sample2_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/D0/sample3_reg
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/D0/sample3_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/D1/P_DATA_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/D1/P_DATA_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/D1/P_DATA_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/D1/P_DATA_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/D1/P_DATA_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/D1/P_DATA_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/D1/P_DATA_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/D1/P_DATA_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/D1/P_DATA_reg[4]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/D1/P_DATA_reg[4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/D1/P_DATA_reg[5]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/D1/P_DATA_reg[5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/D1/P_DATA_reg[6]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/D1/P_DATA_reg[6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/D1/P_DATA_reg[7]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/D1/P_DATA_reg[7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/D1/counter_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/D1/counter_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/D1/counter_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/D1/counter_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/D1/counter_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/D1/counter_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/E/BIT_CNT_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/E/BIT_CNT_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/E/BIT_CNT_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/E/BIT_CNT_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/E/BIT_CNT_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/E/BIT_CNT_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/E/BIT_CNT_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/E/BIT_CNT_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/E/EDGE_CNT_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/E/EDGE_CNT_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/E/EDGE_CNT_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/E/EDGE_CNT_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/E/EDGE_CNT_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/E/EDGE_CNT_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/E/EDGE_CNT_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/E/EDGE_CNT_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/E/EDGE_CNT_reg[4]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/E/EDGE_CNT_reg[4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/F/current_state_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/F/current_state_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/F/current_state_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/F/current_state_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/F/current_state_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/F/current_state_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/P/PAR_ERR_reg
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/P/PAR_ERR_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/S0/STRT_GLITCH_reg
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/S0/STRT_GLITCH_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U4/dut1/S1/STP_ERR_reg
+  Impl DFF        Imp:/WORK/system_top_dft/U4/dut1/S1/STP_ERR_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U5/Q_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U5/Q_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U5/Q_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U5/Q_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U5/SYNC_RST_reg
+  Impl DFF        Imp:/WORK/system_top_dft/U5/SYNC_RST_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U6/Q_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U6/Q_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U6/Q_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U6/Q_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U6/SYNC_RST_reg
+  Impl DFF        Imp:/WORK/system_top_dft/U6/SYNC_RST_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U7/Q_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U7/Q_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U7/Q_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U7/Q_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/D0/OUT_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/D0/OUT_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/D0/OUT_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/D0/OUT_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/D0/OUT_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/D0/OUT_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/D0/OUT_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/D0/OUT_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/D0/Q_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/D0/Q_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/D0/Q_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/D0/Q_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/D0/Q_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/D0/Q_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/D0/Q_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/D0/Q_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/D1/OUT_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/D1/OUT_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/D1/OUT_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/D1/OUT_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/D1/OUT_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/D1/OUT_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/D1/OUT_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/D1/OUT_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/D1/Q_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/D1/Q_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/D1/Q_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/D1/Q_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/D1/Q_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/D1/Q_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/D1/Q_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/D1/Q_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[0][0]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[0][0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[0][1]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[0][1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[0][2]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[0][2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[0][3]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[0][3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[0][4]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[0][4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[0][5]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[0][5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[0][6]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[0][6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[0][7]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[0][7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[1][0]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[1][0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[1][1]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[1][1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[1][2]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[1][2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[1][3]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[1][3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[1][4]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[1][4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[1][5]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[1][5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[1][6]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[1][6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[1][7]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[1][7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[2][0]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[2][0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[2][1]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[2][1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[2][2]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[2][2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[2][3]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[2][3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[2][4]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[2][4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[2][5]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[2][5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[2][6]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[2][6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[2][7]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[2][7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[3][0]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[3][0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[3][1]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[3][1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[3][2]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[3][2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[3][3]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[3][3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[3][4]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[3][4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[3][5]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[3][5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[3][6]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[3][6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[3][7]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[3][7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[4][0]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[4][0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[4][1]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[4][1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[4][2]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[4][2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[4][3]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[4][3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[4][4]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[4][4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[4][5]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[4][5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[4][6]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[4][6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[4][7]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[4][7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[5][0]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[5][0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[5][1]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[5][1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[5][2]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[5][2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[5][3]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[5][3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[5][4]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[5][4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[5][5]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[5][5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[5][6]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[5][6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[5][7]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[5][7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[6][0]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[6][0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[6][1]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[6][1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[6][2]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[6][2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[6][3]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[6][3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[6][4]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[6][4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[6][5]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[6][5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[6][6]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[6][6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[6][7]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[6][7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[7][0]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[7][0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[7][1]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[7][1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[7][2]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[7][2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[7][3]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[7][3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[7][4]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[7][4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[7][5]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[7][5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[7][6]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[7][6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U0/mem_reg[7][7]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U0/mem_reg[7][7]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U1/W_PTR_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U1/W_PTR_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U1/W_PTR_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U1/W_PTR_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U1/W_PTR_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U1/W_PTR_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U1/W_PTR_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U1/W_PTR_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U1/w_gray_out_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U1/w_gray_out_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U1/w_gray_out_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U1/w_gray_out_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U1/w_gray_out_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U1/w_gray_out_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U1/w_gray_out_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U1/w_gray_out_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U2/R_PTR_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U2/R_PTR_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U2/R_PTR_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U2/R_PTR_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U2/R_PTR_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U2/R_PTR_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U2/R_PTR_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U2/R_PTR_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U2/r_gray_out_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U2/r_gray_out_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U2/r_gray_out_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U2/r_gray_out_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U2/r_gray_out_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U2/r_gray_out_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/U8/U2/r_gray_out_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/U8/U2/r_gray_out_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/du/Q_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/du/Q_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/du/Q_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/du/Q_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/du/enable_pulse_reg
+  Impl DFF        Imp:/WORK/system_top_dft/du/enable_pulse_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/du/pulse_ff_reg
+  Impl DFF        Imp:/WORK/system_top_dft/du/pulse_ff_reg
+
+  Ref  DFF        Ref:/WORK/system_top_dft/du/sync_bus_reg[0]
+  Impl DFF        Imp:/WORK/system_top_dft/du/sync_bus_reg[0]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/du/sync_bus_reg[1]
+  Impl DFF        Imp:/WORK/system_top_dft/du/sync_bus_reg[1]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/du/sync_bus_reg[2]
+  Impl DFF        Imp:/WORK/system_top_dft/du/sync_bus_reg[2]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/du/sync_bus_reg[3]
+  Impl DFF        Imp:/WORK/system_top_dft/du/sync_bus_reg[3]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/du/sync_bus_reg[4]
+  Impl DFF        Imp:/WORK/system_top_dft/du/sync_bus_reg[4]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/du/sync_bus_reg[5]
+  Impl DFF        Imp:/WORK/system_top_dft/du/sync_bus_reg[5]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/du/sync_bus_reg[6]
+  Impl DFF        Imp:/WORK/system_top_dft/du/sync_bus_reg[6]
+
+  Ref  DFF        Ref:/WORK/system_top_dft/du/sync_bus_reg[7]
+  Impl DFF        Imp:/WORK/system_top_dft/du/sync_bus_reg[7]
+
+  Ref  Port       Ref:/WORK/system_top_dft/PAR_ERR
+  Impl Port       Imp:/WORK/system_top_dft/PAR_ERR
+
+  Ref  Port       Ref:/WORK/system_top_dft/STP_ERR
+  Impl Port       Imp:/WORK/system_top_dft/STP_ERR
+
+  Ref  Port       Ref:/WORK/system_top_dft/TX_OUT
+  Impl Port       Imp:/WORK/system_top_dft/TX_OUT
+
+ [BBNet: multiply-driven net
+  BBPin: black-box pin
+  Cut:   cut-point
+  DFF:   non-constant DFF register
+  DFF0:  constant 0 DFF register
+  DFF1:  constant 1 DFF register
+  DFFX:  constant X DFF register
+  DFF0X: constrained 0X DFF register
+  DFF1X: constrained 1X DFF register
+  LAT:   non-constant latch register
+  LAT0:  constant 0 latch register
+  LAT1:  constant 1 latch register
+  LATX:  constant X latch register
+  LAT0X: constrained 0X latch register
+  LAT1X: constrained 1X latch register
+  LATCG: clock-gating latch register
+  TLA:   transparent latch register
+  TLA0X: transparent constrained 0X latch register
+  TLA1X: transparent constrained 1X latch register
+  Loop:  cycle break point
+  Port:  primary (top-level) port
+  Und:   undriven signal cut-point
+  Unk:   unknown signal cut-point]
+
+1

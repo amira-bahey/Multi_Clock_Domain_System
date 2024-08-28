@@ -1,0 +1,33 @@
+Error:  /home/IC/Projects/fm_dft/formality_svf/svf.txt (Line: 70) Originally from /home/IC/Projects/dft/system.svf: Parse error.
+****************************************************
+
+Info:  Net Ref:/WORK/system_top_dft/SO[2] is undriven.
+Info:  Net Ref:/WORK/system_top_dft/SO[1] is undriven.
+Info:  Net Ref:/WORK/system_top_dft/SO[0] is undriven.
+Info:  Net Imp:/WORK/ALU_data_width8_out_width16_DW_div_uns_0/remainder[7] is undriven.
+Info:  Net Imp:/WORK/ALU_data_width8_out_width16_DW_div_uns_0/remainder[6] is undriven.
+Info:  Net Imp:/WORK/ALU_data_width8_out_width16_DW_div_uns_0/remainder[5] is undriven.
+Info:  Net Imp:/WORK/ALU_data_width8_out_width16_DW_div_uns_0/remainder[4] is undriven.
+Info:  Net Imp:/WORK/ALU_data_width8_out_width16_DW_div_uns_0/remainder[3] is undriven.
+Info:  Net Imp:/WORK/ALU_data_width8_out_width16_DW_div_uns_0/remainder[2] is undriven.
+Info:  Net Imp:/WORK/ALU_data_width8_out_width16_DW_div_uns_0/remainder[1] is undriven.
+Info:  Net Imp:/WORK/ALU_data_width8_out_width16_DW_div_uns_0/remainder[0] is undriven.
+Info:  Net Imp:/WORK/ALU_data_width8_out_width16_DW_div_uns_0/divide_by_0 is undriven.
+Info:  Net Imp:/WORK/ALU_data_width8_out_width16_DW01_sub_0/CO is undriven.
+Info:  Net Imp:/WORK/ALU_data_width8_out_width16_DW01_add_0/CO is undriven.
+Info:  Net Imp:/WORK/ALU_data_width8_out_width16_DW01_add_1/CO is undriven.
+Info:  guide_uniquify 169 (Line: 1134)  Cannot find object "M6/U1" in design 'system_top_dft'.
+Info:  SVF Operation 169 (Line: 1134) - uniquify.  Status: rejected
+Info:  guide_uniquify 169 (Line: 1134)  Cannot find object "M5/U1" in design 'system_top_dft'.
+Info:  guide_uniquify 169 (Line: 1134)  Cannot find object "M4/U1" in design 'system_top_dft'.
+Info:  guide_uniquify 169 (Line: 1134)  Cannot find object "M3/U1" in design 'system_top_dft'.
+Info:  guide_uniquify 169 (Line: 1134)  Cannot find object "M2/U1" in design 'system_top_dft'.
+Info:  guide_uniquify 169 (Line: 1134)  Cannot find object "M1/U1" in design 'system_top_dft'.
+Info:  guide_uniquify 169 (Line: 1134)  Cannot find object "M0/U1" in design 'system_top_dft'.
+Info:  guide_uniquify 169 (Line: 1134)  Cannot find object "U11/U12" in design 'system_top_dft'.
+Info:  guide_uniquify 169 (Line: 1134)  Cannot find object "U10/U12" in design 'system_top_dft'.
+Info:  guide_uniquify 177 (Line: 1188)  Cannot find object "U2/dp_cluster_0/mult_27" in design 'system_top_dft'.
+Info:  Pre-verification of Ref:/WORK/ALU_data_width8_out_width16/div_30 SUCCEEDED.
+Info:  Pre-verification of Ref:/WORK/ALU_data_width8_out_width16/mult_27 SUCCEEDED.
+****************************************************
+
