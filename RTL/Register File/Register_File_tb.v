@@ -83,7 +83,7 @@ initial
  
 always #5 CLK_tb=~CLK_tb;
 
-Register_File dut (
+ Register_File #(.addr(addr),.width(width)) dut (
 .WrData(WrData_tb),
 .Address(Address_tb),
 .WrEn(WrEn_tb),
