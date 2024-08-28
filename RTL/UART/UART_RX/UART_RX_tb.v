@@ -11,7 +11,7 @@ reg [5:0] PRESCALE_tb;
 reg PAR_TYP_tb;
 reg PAR_EN_tb;
 wire DATA_VALID_tb;
-wire [7:0] P_DATA_tb;
+wire [width-1:0] P_DATA_tb;
 wire PAR_ERR_tb;
 wire STP_ERR_tb;
 
