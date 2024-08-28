@@ -3,7 +3,8 @@
 module UART_RX_tb();
   
 parameter clock_period=5.00; //(freq 200MHZ)
-
+parameter width=8;
+  
 reg CLK_tb,RST_tb;  
 reg RX_IN_tb;
 reg [5:0] PRESCALE_tb;
@@ -195,7 +196,7 @@ endtask
 
 always #(clock_period/2) CLK_tb=~CLK_tb;
 
-UART_RX dut(
+UART_RX #(.width(width)) dut(
 .CLK(CLK_tb),
 .RST(RST_tb),
 .RX_IN(RX_IN_tb),
