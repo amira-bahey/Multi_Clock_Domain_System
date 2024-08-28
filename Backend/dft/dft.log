@@ -1,0 +1,2653 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+                 Version K-2015.06 for linux64 - May 28, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/IC/.synopsys_dv_prefs.tcl
+########################### Define Top Module ############################
+set top_module system_top_dft
+system_top_dft
+##################### Define Working Library Directory ######################
+define_design_lib work -path ./work
+1
+########################### Formality Setup file ############################
+set_svf system.svf
+1
+################## Design Compiler Library Files #setup ######################
+lappend search_path /home/IC/Projects/std_cells
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/Projects/std_cells
+lappend search_path /home/IC/Projects/rtl
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/Projects/std_cells /home/IC/Projects/rtl
+set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set FFLIB "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+## Standard Cell libraries 
+set target_library [list $SSLIB $TTLIB $FFLIB]
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+## Standard Cell & Hard Macros libraries 
+set link_library [list * $SSLIB $TTLIB $FFLIB]  
+* scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+#echo "###############################################"
+#echo "############# Reading RTL Files  ##############"
+#echo "###############################################"
+analyze -format verilog [glob /home/IC/Projects/rtl/*.v]
+Running PRESTO HDLC
+Compiling source file /home/IC/Projects/rtl/parity_calc.v
+Compiling source file /home/IC/Projects/rtl/FIFO_WR.v
+Compiling source file /home/IC/Projects/rtl/FIFO_MEM.v
+Compiling source file /home/IC/Projects/rtl/Register_File.v
+Compiling source file /home/IC/Projects/rtl/Pulse_Gen.v
+Compiling source file /home/IC/Projects/rtl/UART_RX.v
+Compiling source file /home/IC/Projects/rtl/System_Top_dft.v
+Compiling source file /home/IC/Projects/rtl/Clock_Divider.v
+Compiling source file /home/IC/Projects/rtl/data_synchronizer.v
+Compiling source file /home/IC/Projects/rtl/mux2X1.v
+Compiling source file /home/IC/Projects/rtl/System_Top.v
+Compiling source file /home/IC/Projects/rtl/CLK_GATE.v
+Compiling source file /home/IC/Projects/rtl/FIFO.v
+Compiling source file /home/IC/Projects/rtl/clock_divider_mux.v
+Compiling source file /home/IC/Projects/rtl/UART_TX.v
+Compiling source file /home/IC/Projects/rtl/serializer.v
+Compiling source file /home/IC/Projects/rtl/data_sampling.v
+Compiling source file /home/IC/Projects/rtl/UART.v
+Compiling source file /home/IC/Projects/rtl/edge_bit_counter.v
+Compiling source file /home/IC/Projects/rtl/PARITY_CHECK.v
+Compiling source file /home/IC/Projects/rtl/DF_SYNC.v
+Compiling source file /home/IC/Projects/rtl/FIFO_RD.v
+Compiling source file /home/IC/Projects/rtl/STOP_CHECK.v
+Compiling source file /home/IC/Projects/rtl/STRT_CHECK.v
+Compiling source file /home/IC/Projects/rtl/deserializer.v
+Compiling source file /home/IC/Projects/rtl/RST_SYNC.v
+Compiling source file /home/IC/Projects/rtl/16-bit ALU.v
+Presto compilation completed successfully.
+Loading db file '/home/IC/Projects/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/Projects/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/Projects/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+analyze -format sverilog [glob /home/IC/Projects/rtl/*.sv]
+Running PRESTO HDLC
+Compiling source file /home/IC/Projects/rtl/fsmm.sv
+Warning:  /home/IC/Projects/rtl/fsmm.sv:19: Using default enum base size of 32. (VER-533)
+Compiling source file /home/IC/Projects/rtl/SYS_CTRL.sv
+Warning:  /home/IC/Projects/rtl/SYS_CTRL.sv:32: Using default enum base size of 32. (VER-533)
+Compiling source file /home/IC/Projects/rtl/FSM.sv
+Warning:  /home/IC/Projects/rtl/FSM.sv:29: Using default enum base size of 32. (VER-533)
+Presto compilation completed successfully.
+1
+elaborate -lib work $top_module
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/gtech.db'
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/standard.sldb'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'system_top_dft'.
+Information: Building the design 'SYS_CTRL' instantiated from design 'system_top_dft' with
+	the parameters "data_width=8,addr=4,out_width=16". (HDL-193)
+
+Statistics for case statements in always block at line 51 in file
+	'/home/IC/Projects/rtl/SYS_CTRL.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            53            |    auto/auto     |
+|            57            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 176 in file
+	'/home/IC/Projects/rtl/SYS_CTRL.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           190            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine SYS_CTRL_data_width8_addr4_out_width16 line 39 in file
+		'/home/IC/Projects/rtl/SYS_CTRL.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SYS_CTRL_data_width8_addr4_out_width16 line 350 in file
+		'/home/IC/Projects/rtl/SYS_CTRL.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   ALU_OUT_reg_reg   | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SYS_CTRL_data_width8_addr4_out_width16 line 366 in file
+		'/home/IC/Projects/rtl/SYS_CTRL.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   Address_reg_reg   | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Register_File' instantiated from design 'system_top_dft' with
+	the parameters "addr=4,width=8". (HDL-193)
+
+Inferred memory devices in process
+	in routine Register_File_addr4_width8 line 14 in file
+		'/home/IC/Projects/rtl/Register_File.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Reg_File_reg     | Flip-flop |  61   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Reg_File_reg     | Flip-flop |   3   |  Y  | N  | N  | Y  | N  | N  | N  |
+|  RdData_Valid_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     RdData_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+========================================================================
+|       block name/line         | Inputs | Outputs | # sel inputs | MB |
+========================================================================
+| Register_File_addr4_width8/42 |   8    |    8    |      3       | N  |
+========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'ALU' instantiated from design 'system_top_dft' with
+	the parameters "data_width=8,out_width=16". (HDL-193)
+
+Statistics for case statements in always block at line 10 in file
+	'/home/IC/Projects/rtl/16-bit ALU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            19            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 98 in file
+	'/home/IC/Projects/rtl/16-bit ALU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           100            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine ALU_data_width8_out_width16 line 10 in file
+		'/home/IC/Projects/rtl/16-bit ALU.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ALU_OUT_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    ALU_Valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'CLK_GATE'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'UART' instantiated from design 'system_top_dft' with
+	the parameters "width=8". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'RST_SYNC' instantiated from design 'system_top_dft' with
+	the parameters "NUM_STAGES=2". (HDL-193)
+
+Inferred memory devices in process
+	in routine RST_SYNC_NUM_STAGES2 line 9 in file
+		'/home/IC/Projects/rtl/RST_SYNC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        Q_reg        | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    SYNC_RST_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Pulse_Gen'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Pulse_Gen line 11 in file
+		'/home/IC/Projects/rtl/Pulse_Gen.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        Q_reg        | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'FIFO' instantiated from design 'system_top_dft' with
+	the parameters "DATA_WIDTH=8". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Clock_Divider'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Clock_Divider line 17 in file
+		'/home/IC/Projects/rtl/Clock_Divider.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      flag_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     counter_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     div_clk_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'clk_div_mux'. (HDL-193)
+
+Statistics for case statements in always block at line 5 in file
+	'/home/IC/Projects/rtl/clock_divider_mux.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            7             |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'data_synchronizer' instantiated from design 'system_top_dft' with
+	the parameters "data_width=8". (HDL-193)
+
+Inferred memory devices in process
+	in routine data_synchronizer_data_width8 line 14 in file
+		'/home/IC/Projects/rtl/data_synchronizer.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        Q_reg        | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    pulse_ff_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine data_synchronizer_data_width8 line 29 in file
+		'/home/IC/Projects/rtl/data_synchronizer.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    sync_bus_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  enable_pulse_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mux2X1'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'UART_TX' instantiated from design 'UART_width8' with
+	the parameters "width=8". (HDL-193)
+
+Statistics for case statements in always block at line 47 in file
+	'/home/IC/Projects/rtl/UART_TX.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            49            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine UART_TX_width8 line 57 in file
+		'/home/IC/Projects/rtl/UART_TX.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     TX_OUT_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'UART_RX' instantiated from design 'UART_width8' with
+	the parameters "width=8". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'FIFO_MEM' instantiated from design 'FIFO_DATA_WIDTH8' with
+	the parameters "DATA_WIDTH=8". (HDL-193)
+
+Inferred memory devices in process
+	in routine FIFO_MEM_DATA_WIDTH8 line 13 in file
+		'/home/IC/Projects/rtl/FIFO_MEM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+==================================================================
+|    block name/line      | Inputs | Outputs | # sel inputs | MB |
+==================================================================
+| FIFO_MEM_DATA_WIDTH8/28 |   8    |    8    |      3       | N  |
+==================================================================
+Presto compilation completed successfully.
+Information: Building the design 'DATA_SYNC'. (HDL-193)
+
+Inferred memory devices in process
+	in routine DATA_SYNC line 9 in file
+		'/home/IC/Projects/rtl/DF_SYNC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        Q_reg        | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       OUT_reg       | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'FIFO_WR'. (HDL-193)
+Warning:  /home/IC/Projects/rtl/FIFO_WR.v:55: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 25 in file
+	'/home/IC/Projects/rtl/FIFO_WR.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            33            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine FIFO_WR line 13 in file
+		'/home/IC/Projects/rtl/FIFO_WR.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      W_PTR_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine FIFO_WR line 25 in file
+		'/home/IC/Projects/rtl/FIFO_WR.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   w_gray_out_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'FIFO_RD'. (HDL-193)
+Warning:  /home/IC/Projects/rtl/FIFO_RD.v:55: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 24 in file
+	'/home/IC/Projects/rtl/FIFO_RD.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            32            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine FIFO_RD line 13 in file
+		'/home/IC/Projects/rtl/FIFO_RD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      R_PTR_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine FIFO_RD line 24 in file
+		'/home/IC/Projects/rtl/FIFO_RD.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   r_gray_out_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'serializer' instantiated from design 'UART_TX_width8' with
+	the parameters "data_width=8". (HDL-193)
+Warning:  /home/IC/Projects/rtl/serializer.v:35: signed to unsigned assignment occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine serializer_data_width8 line 13 in file
+		'/home/IC/Projects/rtl/serializer.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    ser_data_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     counter_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     counter_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'fsm'. (HDL-193)
+
+Statistics for case statements in always block at line 42 in file
+	'/home/IC/Projects/rtl/fsmm.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            44            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 94 in file
+	'/home/IC/Projects/rtl/fsmm.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            96            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine fsm line 30 in file
+		'/home/IC/Projects/rtl/fsmm.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine fsm line 130 in file
+		'/home/IC/Projects/rtl/fsmm.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      busy_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'parity_calc' instantiated from design 'UART_TX_width8' with
+	the parameters "data_width=8". (HDL-193)
+
+Inferred memory devices in process
+	in routine parity_calc_data_width8 line 9 in file
+		'/home/IC/Projects/rtl/parity_calc.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     PAR_BIT_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'FSM'. (HDL-193)
+
+Statistics for case statements in always block at line 55 in file
+	'/home/IC/Projects/rtl/FSM.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            57            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 130 in file
+	'/home/IC/Projects/rtl/FSM.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           132            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine FSM line 41 in file
+		'/home/IC/Projects/rtl/FSM.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'data_sampling'. (HDL-193)
+
+Inferred memory devices in process
+	in routine data_sampling line 12 in file
+		'/home/IC/Projects/rtl/data_sampling.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     sample3_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     sample2_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     sample1_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'deserializer'. (HDL-193)
+
+Inferred memory devices in process
+	in routine deserializer line 10 in file
+		'/home/IC/Projects/rtl/deserializer.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     counter_reg     | Flip-flop |   3   |  Y  | N  | N  | Y  | N  | N  | N  |
+|     P_DATA_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'edge_bit_counter'. (HDL-193)
+
+Inferred memory devices in process
+	in routine edge_bit_counter line 10 in file
+		'/home/IC/Projects/rtl/edge_bit_counter.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    EDGE_CNT_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     BIT_CNT_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'PARITY_CHECK'. (HDL-193)
+
+Inferred memory devices in process
+	in routine PARITY_CHECK line 12 in file
+		'/home/IC/Projects/rtl/PARITY_CHECK.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     PAR_ERR_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'STRT_CHECK'. (HDL-193)
+
+Inferred memory devices in process
+	in routine STRT_CHECK line 8 in file
+		'/home/IC/Projects/rtl/STRT_CHECK.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   STRT_GLITCH_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'STOP_CHECK'. (HDL-193)
+
+Inferred memory devices in process
+	in routine STOP_CHECK line 8 in file
+		'/home/IC/Projects/rtl/STOP_CHECK.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     STP_ERR_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+###################### Defining toplevel ###################################
+current_design $top_module
+Current design is 'system_top_dft'.
+{system_top_dft}
+#################### Liniking All The Design Parts #########################
+puts "###############################################"
+###############################################
+puts "######## Liniking All The Design Parts ########"
+######## Liniking All The Design Parts ########
+puts "###############################################"
+###############################################
+link 
+
+  Linking design 'system_top_dft'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (29 designs)              /home/IC/Projects/dft/system_top_dft.db, etc
+  scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (library) /home/IC/Projects/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+  scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (library) /home/IC/Projects/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+  scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c (library) /home/IC/Projects/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+
+1
+#################### Liniking All The Design Parts #########################
+puts "###############################################"
+###############################################
+puts "######## checking design consistency ##########"
+######## checking design consistency ##########
+puts "###############################################"
+###############################################
+check_design
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06
+Date:        Mon Aug 26 17:39:41 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     18
+    Unconnected ports (LINT-28)                                     7
+    Shorted outputs (LINT-31)                                       4
+    Constant outputs (LINT-52)                                      7
+
+Cells                                                              17
+    Cells do not drive (LINT-1)                                    17
+
+Nets                                                                4
+    Unloaded nets (LINT-2)                                          4
+--------------------------------------------------------------------------------
+
+Warning: In design 'ALU_data_width8_out_width16', cell 'C449' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_data_width8_out_width16', cell 'C450' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_data_width8_out_width16', cell 'C451' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_data_width8_out_width16', cell 'C452' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_data_width8_out_width16', cell 'C485' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_data_width8_out_width16', cell 'C487' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_data_width8_out_width16', cell 'C489' does not drive any nets. (LINT-1)
+Warning: In design 'Clock_Divider', cell 'C131' does not drive any nets. (LINT-1)
+Warning: In design 'FIFO_WR', cell 'C193' does not drive any nets. (LINT-1)
+Warning: In design 'FIFO_RD', cell 'C190' does not drive any nets. (LINT-1)
+Warning: In design 'serializer_data_width8', cell 'C158' does not drive any nets. (LINT-1)
+Warning: In design 'FSM', cell 'C546' does not drive any nets. (LINT-1)
+Warning: In design 'FSM', cell 'C548' does not drive any nets. (LINT-1)
+Warning: In design 'FSM', cell 'C550' does not drive any nets. (LINT-1)
+Warning: In design 'deserializer', cell 'C97' does not drive any nets. (LINT-1)
+Warning: In design 'edge_bit_counter', cell 'C102' does not drive any nets. (LINT-1)
+Warning: In design 'edge_bit_counter', cell 'C111' does not drive any nets. (LINT-1)
+Warning: In design 'system_top_dft', net 'Shift_Flag' driven by pin 'U2/Shift_Flag' has no loads. (LINT-2)
+Warning: In design 'system_top_dft', net 'CMP_Flag' driven by pin 'U2/CMP_Flag' has no loads. (LINT-2)
+Warning: In design 'system_top_dft', net 'Logic_Flag' driven by pin 'U2/Logic_Flag' has no loads. (LINT-2)
+Warning: In design 'system_top_dft', net 'Arith_Flag' driven by pin 'U2/Arith_Flag' has no loads. (LINT-2)
+Warning: In design 'system_top_dft', port 'SI[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'system_top_dft', port 'SI[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'system_top_dft', port 'SI[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'system_top_dft', port 'SE' is not connected to any nets. (LINT-28)
+Warning: In design 'system_top_dft', port 'SO[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'system_top_dft', port 'SO[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'system_top_dft', port 'SO[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'clk_div_mux', output port 'div_ratio_rx[7]' is connected directly to output port 'div_ratio_rx[3]'. (LINT-31)
+Warning: In design 'clk_div_mux', output port 'div_ratio_rx[7]' is connected directly to output port 'div_ratio_rx[4]'. (LINT-31)
+Warning: In design 'clk_div_mux', output port 'div_ratio_rx[7]' is connected directly to output port 'div_ratio_rx[5]'. (LINT-31)
+Warning: In design 'clk_div_mux', output port 'div_ratio_rx[7]' is connected directly to output port 'div_ratio_rx[6]'. (LINT-31)
+Warning: In design 'SYS_CTRL_data_width8_addr4_out_width16', output port 'clk_div_en' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'clk_div_mux', output port 'div_ratio_rx[7]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'clk_div_mux', output port 'div_ratio_rx[6]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'clk_div_mux', output port 'div_ratio_rx[5]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'clk_div_mux', output port 'div_ratio_rx[4]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'clk_div_mux', output port 'div_ratio_rx[3]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'FSM', output port 'DATA_SAMP_EN' is connected directly to 'logic 1'. (LINT-52)
+1
+############################### Path groups ################################
+puts "###############################################"
+###############################################
+puts "################ Path groups ##################"
+################ Path groups ##################
+puts "###############################################"
+###############################################
+group_path -name INREG -from [all_inputs]
+1
+group_path -name REGOUT -to [all_outputs]
+1
+group_path -name INOUT -from [all_inputs] -to [all_outputs]
+1
+#################### Define Design Constraints #########################
+puts "###############################################"
+###############################################
+puts "############ Design Constraints #### ##########"
+############ Design Constraints #### ##########
+puts "###############################################"
+###############################################
+source -echo ./cons.tcl
+# Constraints
+# ----------------------------------------------------------------------------
+#
+# 1. Master Clock Definitions
+#
+# 2. Generated Clock Definitions
+#
+# 3. Clock Uncertainties
+#
+# 4. Clock Latencies 
+#
+# 5. Clock Relationships
+#
+# 6. set input/output delay on ports
+#
+# 7. Driving cells
+#
+# 8. Output load
+####################################################################################
+#########################################################
+#### Section 1 : Clock Definition ####
+#########################################################
+#################################################################################### 
+# 1. Master Clock Definitions 
+# 2. Generated Clock Definitions
+# 3. Clock Latencies
+# 4. Clock Uncertainties
+# 4. Clock Transitions
+####################################################################################
+set CLK_NAME_REF REF_CLK
+set CLK_PER_REF 20
+set CLK_NAME_UART UART_CLK
+set CLK_PER_UART 271.26736
+set GEN_NAME_ALU ALU_CLK
+set GEN_NAME_TX TX_CLK
+set GEN_NAME_RX RX_CLK
+set CLK_SETUP_SKEW 0.2
+set CLK_HOLD_SKEW 0.1
+set CLK_LAT 0
+set CLK_RISE 0.05
+set CLK_FALL 0.05
+create_clock -name $CLK_NAME_REF -period $CLK_PER_REF -waveform "0 [expr $CLK_PER_REF/2]" [get_ports REF_CLK]
+create_clock -name $CLK_NAME_UART -period $CLK_PER_UART -waveform "0 [expr $CLK_PER_UART/2]" [get_ports UART_CLK]
+create_generated_clock -master_clock $CLK_NAME_REF -source [get_ports REF_CLK]                        -name $GEN_NAME_ALU [get_ports U2/CLK] -divide_by 1
+create_generated_clock -master_clock $CLK_NAME_UART -source [get_ports UART_CLK]                        -name $GEN_NAME_TX [get_ports {U4/TX_CLK U7/CLK U8/R_CLK}] -divide_by 32
+create_generated_clock -master_clock $CLK_NAME_UART -source [get_ports UART_CLK]                        -name $GEN_NAME_RX [get_ports U4/TX_CLK] -divide_by 1
+set_clock_latency $CLK_LAT [get_clocks $CLK_NAME_REF]
+set_clock_latency $CLK_LAT [get_clocks $CLK_NAME_UART]
+set_clock_latency $CLK_LAT [get_clocks $GEN_NAME_ALU]
+set_clock_latency $CLK_LAT [get_clocks $GEN_NAME_TX]
+set_clock_latency $CLK_LAT [get_clocks $GEN_NAME_RX]
+set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks $CLK_NAME_REF]
+set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks $CLK_NAME_UART]
+set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks $GEN_NAME_ALU]
+set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks $GEN_NAME_TX]
+set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks $GEN_NAME_RX]
+set_clock_uncertainty -hold $CLK_HOLD_SKEW [get_clocks $CLK_NAME_REF]
+set_clock_uncertainty -hold $CLK_HOLD_SKEW [get_clocks $CLK_NAME_UART]
+set_clock_uncertainty -hold $CLK_HOLD_SKEW [get_clocks $GEN_NAME_ALU]
+set_clock_uncertainty -hold $CLK_HOLD_SKEW [get_clocks $GEN_NAME_TX]
+set_clock_uncertainty -hold $CLK_HOLD_SKEW [get_clocks $GEN_NAME_RX]
+set_clock_transition -rise $CLK_RISE [get_clocks $CLK_NAME_REF]	
+set_clock_transition -rise $CLK_RISE [get_clocks $CLK_NAME_UART]	
+set_clock_transition -rise $CLK_RISE [get_clocks $GEN_NAME_ALU]	
+set_clock_transition -rise $CLK_RISE [get_clocks $GEN_NAME_TX]	
+set_clock_transition -rise $CLK_RISE [get_clocks $GEN_NAME_RX]	
+set_clock_transition -fall $CLK_FALL [get_clocks $CLK_NAME_REF]	
+set_clock_transition -fall $CLK_FALL [get_clocks $CLK_NAME_UART]	
+set_clock_transition -fall $CLK_FALL [get_clocks $GEN_NAME_ALU]	
+set_clock_transition -fall $CLK_FALL [get_clocks $GEN_NAME_TX]	
+set_clock_transition -fall $CLK_FALL [get_clocks $GEN_NAME_RX]	
+#################################### scanclock ################################################
+set DFT_CLK_NAME dft_clk
+set DFT_CLK_PER 100
+set DFT_SETUP_SKEW 0.2
+set DFT_HOLD_SKEW 0.1
+set DFT_LAT 0
+set DFT_RISE 0.05
+set DFT_FALL 0.05
+create_clock -name $DFT_CLK_NAME -period $DFT_CLK_PER -waveform "0 [expr $DFT_CLK_PER/2]" [get_ports scan_clk]
+set_clock_uncertainty -setup $DFT_SETUP_SKEW [get_clocks $DFT_CLK_NAME]
+set_clock_uncertainty -hold $DFT_HOLD_SKEW [get_clocks $DFT_CLK_NAME]
+set_clock_latency $DFT_LAT [get_clocks $DFT_CLK_NAME]
+set_clock_transition -rise $DFT_RISE [get_clocks $DFT_CLK_NAME]
+set_clock_transition -fall $DFT_FALL [get_clocks $DFT_CLK_NAME]
+####################################################################################
+#########################################################
+#### Section 2 : Clocks Relationships ####
+#########################################################
+####################################################################################
+set_clock_groups -asynchronous -group [get_clocks "$CLK_NAME_REF $GEN_NAME_ALU"]                                -group [get_clocks "$CLK_NAME_UART $GEN_NAME_TX $GEN_NAME_RX"]                                -group [get_clocks "$DFT_CLK_NAME"]
+####################################################################################
+#########################################################
+#### Section 3 : set input/output delay on ports ####
+#########################################################
+####################################################################################
+set in_delay_uart  [expr 0.2*$CLK_PER_UART]
+set out_delay_uart [expr 0.2*$CLK_PER_UART]
+set in_delay_dft  [expr 0.2*$DFT_CLK_PER]
+set out_delay_dft [expr 0.2*$DFT_CLK_PER]
+#Constrain Input Paths
+set_input_delay $in_delay_uart -clock $CLK_NAME_REF [get_ports RX_IN]
+set_input_delay $in_delay_dft -clock $DFT_CLK_NAME [get_ports {SI SE test_mode}]
+#Constrain Output Paths
+set_output_delay $out_delay_uart -clock $CLK_NAME_UART [get_ports {TX_OUT PAR_ERR STP_ERR}]
+set_output_delay $out_delay_dft -clock $DFT_CLK_NAME [get_ports SO]
+####################################################################################
+#########################################################
+#### Section 4 : Driving cells ####
+#########################################################
+####################################################################################
+set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y                  [get_ports {RX_IN SI SE test_mode}] 
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+####################################################################################
+#########################################################
+#### Section 5 : Output load ####
+#########################################################
+####################################################################################
+set_load 0.1 [get_ports {TX_OUT PAR_ERR STP_ERR SO}]
+####################################################################################
+#########################################################
+#### Section 6 : Operating Condition ####
+#########################################################
+####################################################################################
+# Define the Worst Library for Max(#setup) analysis
+# Define the Best Library for Min(hold) analysis
+set_operating_conditions -min_library "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" -min "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c"                          -max_library "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c" -max "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c"
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' found in library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'.
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c' found in library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'.
+####################################################################################
+#########################################################
+#### Section 7 : wireload Model ####
+#########################################################
+####################################################################################
+set_wire_load_model -name tsmc13_wl30 -library "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c"
+#########################################################
+#### Section 8 : set_case_analysis ####
+#########################################################
+####################################################################################
+set_case_analysis 1 [get_ports test_mode]
+1
+#################### Archirecture Scan Chains #########################
+puts "###############################################"
+###############################################
+puts "############ Configure scan chains ############"
+############ Configure scan chains ############
+puts "###############################################"
+###############################################
+set_scan_configuration -clock_mixing no_mix  -style multiplexed_flip_flop -replace true -max_length 100  
+Accepted scan configuration for modes: all_dft
+1
+###################### Mapping and optimization ########################
+puts "###############################################"
+###############################################
+puts "########## Mapping & Optimization #############"
+########## Mapping & Optimization #############
+puts "###############################################"
+###############################################
+compile -scan
+Information: Choosing a test methodology will restrict the optimization of sequential cells. (UIO-12)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 39 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition scmetro_tsmc_cl013g_rvt_ss_1p08v_125c set on design system_top_dft has different process,
+voltage and temperatures parameters than the parameters at which target library 
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'mux2X1_0'
+  Processing 'data_synchronizer_data_width8'
+  Processing 'clk_div_mux'
+  Processing 'Clock_Divider_0'
+  Processing 'FIFO_RD'
+  Processing 'FIFO_WR'
+  Processing 'DATA_SYNC_0'
+  Processing 'FIFO_MEM_DATA_WIDTH8'
+  Processing 'FIFO_DATA_WIDTH8'
+  Processing 'Pulse_Gen'
+  Processing 'RST_SYNC_NUM_STAGES2_0'
+  Processing 'STOP_CHECK'
+  Processing 'STRT_CHECK'
+  Processing 'PARITY_CHECK'
+  Processing 'edge_bit_counter'
+  Processing 'deserializer'
+  Processing 'data_sampling'
+  Processing 'FSM'
+Information: The register 'current_state_reg[31]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[30]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[29]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[28]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[27]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[26]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[25]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[24]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[3]' is a constant and will be removed. (OPT-1206)
+  Processing 'UART_RX_width8'
+  Processing 'parity_calc_data_width8'
+  Processing 'fsm'
+Information: The register 'current_state_reg[31]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[30]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[29]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[28]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[27]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[26]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[25]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[24]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[3]' is a constant and will be removed. (OPT-1206)
+  Processing 'serializer_data_width8'
+  Processing 'UART_TX_width8'
+  Processing 'UART_width8'
+  Processing 'CLK_GATE'
+  Processing 'ALU_data_width8_out_width16'
+  Processing 'Register_File_addr4_width8'
+  Processing 'SYS_CTRL_data_width8_addr4_out_width16'
+Information: The register 'current_state_reg[31]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[30]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[29]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[28]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[27]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[26]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[25]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[24]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'current_state_reg[4]' is a constant and will be removed. (OPT-1206)
+  Processing 'system_top_dft'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'Clock_Divider_1_DW01_inc_0'
+  Processing 'Clock_Divider_1_DW01_cmp6_0'
+  Processing 'Clock_Divider_1_DW01_cmp6_1'
+  Processing 'Clock_Divider_1_DW01_dec_0'
+  Processing 'Clock_Divider_0_DW01_inc_0'
+  Processing 'Clock_Divider_0_DW01_cmp6_0'
+  Processing 'Clock_Divider_0_DW01_cmp6_1'
+  Processing 'Clock_Divider_0_DW01_dec_0'
+  Processing 'edge_bit_counter_DW01_inc_0'
+  Processing 'edge_bit_counter_DW01_cmp6_0'
+  Processing 'edge_bit_counter_DW01_dec_0'
+  Processing 'FSM_DW01_cmp6_0'
+  Processing 'FSM_DW01_dec_0'
+  Processing 'ALU_data_width8_out_width16_DW_div_uns_0'
+  Processing 'ALU_data_width8_out_width16_DW01_sub_0'
+  Processing 'ALU_data_width8_out_width16_DW01_add_0'
+  Processing 'ALU_data_width8_out_width16_DW01_cmp6_0'
+  Processing 'ALU_data_width8_out_width16_DW02_mult_0'
+  Processing 'ALU_data_width8_out_width16_DW01_add_1'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:07  736023.9      0.00       0.0      49.6                          
+    0:00:07  736023.9      0.00       0.0      49.6                          
+    0:00:07  736023.9      0.00       0.0      49.6                          
+    0:00:07  736023.9      0.00       0.0      49.6                          
+    0:00:07  736023.9      0.00       0.0      49.6                          
+    0:00:08  712037.4      0.00       0.0      29.9                          
+    0:00:08  711948.0      0.00       0.0      29.9                          
+    0:00:09  711948.0      0.00       0.0       9.6                          
+    0:00:09  711948.0      0.00       0.0       9.6                          
+    0:00:09  711948.0      0.00       0.0       9.6                          
+    0:00:09  711948.0      0.00       0.0       9.6                          
+    0:00:09  711948.0      0.00       0.0       9.6                          
+    0:00:09  712245.6      0.00       0.0       2.4                          
+    0:00:09  712252.7      0.00       0.0       0.8                          
+    0:00:09  712255.0      0.00       0.0       0.0                          
+    0:00:09  712259.7      0.00       0.0       0.0                          
+    0:00:09  712259.7      0.00       0.0       0.0                          
+    0:00:09  712259.7      0.00       0.0       0.0                          
+    0:00:09  712259.7      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:09  712259.7      0.00       0.0       0.0                          
+    0:00:09  712259.7      0.00       0.0       0.0                          
+    0:00:10  704702.1      0.00       0.0       5.9                          
+    0:00:13  670728.9      0.00       0.0      53.9                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:13  670728.9      0.00       0.0      53.9                          
+    0:00:14  672748.9      0.00       0.0      22.5 U1/REG3[6]               
+    0:00:14  674194.8      0.00       0.0       2.6 U4/dut1/D1/net8016       
+    0:00:15  676781.9      0.00       0.0       1.1 U1/REG1[5]               
+    0:00:15  677665.5      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:15  677665.5      0.00       0.0       0.0                          
+    0:00:15  677665.5      0.00       0.0       0.0                          
+    0:00:15  672799.5      0.00       0.0       0.0                          
+    0:00:15  672224.2      0.00       0.0       0.0                          
+    0:00:15  672079.5      0.00       0.0       0.0                          
+    0:00:15  671934.8      0.00       0.0       0.0                          
+    0:00:15  671788.9      0.00       0.0       0.0                          
+    0:00:15  671788.9      0.00       0.0       0.0                          
+    0:00:15  671788.9      0.00       0.0       0.0                          
+    0:00:16  671752.5      0.00       0.0       0.0                          
+    0:00:16  671752.5      0.00       0.0       0.0                          
+    0:00:16  671752.5      0.00       0.0       0.0                          
+    0:00:16  671752.5      0.00       0.0       0.0                          
+    0:00:16  671752.5      0.00       0.0       0.0                          
+    0:00:16  671752.5      0.00       0.0       0.0                          
+    0:00:16  671752.5      0.00       0.0       0.0                          
+Loading db file '/home/IC/Projects/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/Projects/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/Projects/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+################################################################### 
+# Setting Test Timing Variables
+################################################################### 
+# Preclock Measure Protocol (default protocol)
+set test_default_period 100
+100
+set test_default_delay 0
+0
+set test_default_bidir_delay 0
+0
+set test_default_strobe 20
+20
+set test_default_strobe_width 0
+0
+########################## Define DFT Signals ##########################
+set_dft_signal -port [get_ports scan_clk]  -type ScanClock   -view existing_dft  -timing {30 60}
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -port [get_ports scan_rst]  -type Reset       -view existing_dft  -active_state 0
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -port [get_ports test_mode] -type Constant    -view existing_dft  -active_state 1 
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -port [get_ports test_mode] -type TestMode    -view spec          -active_state 1 
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -port [get_ports SE]        -type ScanEnable  -view spec          -active_state 1   -usage scan
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -port [get_ports SI]        -type ScanDataIn  -view spec 
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -port [get_ports SO]        -type ScanDataOut -view spec  
+Accepted dft signal specification for modes: all_dft
+1
+############################# Create Test Protocol #####################
+create_test_protocol
+In mode: all_dft...
+
+Information: Starting test protocol creation. (TEST-219)
+  ...reading user specified clock signals...
+Information: Identified system/test clock port scan_clk (30.0,60.0). (TEST-265)
+  ...reading user specified asynchronous signals...
+Information: Identified active low asynchronous control port scan_rst. (TEST-266)
+1
+###################### Pre-DFT Design Rule Checking ####################
+dft_drc -verbose
+In mode: all_dft...
+  Pre-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  	...checking for scan equivalents...
+  ...checking vector rules...
+  ...checking pre-dft rules...
+
+-----------------------------------------------------------------
+Begin Other violations...
+
+Warning: Cell U3/U0_TLATNCAX12M has constant 1 value. (TEST-505)
+
+Other violations completed...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 1
+
+-----------------------------------------------------------------
+
+1 OTHER VIOLATION
+     1 Cell is constant 1 violation (TEST-505)
+
+
+Warning: Violations occurred during test design rule checking. (TEST-124)
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  1 out of 299 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+      *   1 cell has constant 1 value
+         U3/U0_TLATNCAX12M
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      * 298 cells are valid scan cells
+         U0/Address_reg_reg[2]
+         U0/Address_reg_reg[1]
+         U0/Address_reg_reg[0]
+         U0/Address_reg_reg[3]
+         U0/ALU_OUT_reg_reg[15]
+         U0/ALU_OUT_reg_reg[14]
+         U0/ALU_OUT_reg_reg[13]
+         U0/ALU_OUT_reg_reg[12]
+         U0/ALU_OUT_reg_reg[11]
+         U0/ALU_OUT_reg_reg[10]
+         U0/ALU_OUT_reg_reg[9]
+         U0/ALU_OUT_reg_reg[8]
+         U0/ALU_OUT_reg_reg[7]
+         U0/ALU_OUT_reg_reg[6]
+         U0/ALU_OUT_reg_reg[5]
+         U0/ALU_OUT_reg_reg[4]
+         U0/ALU_OUT_reg_reg[3]
+         U0/ALU_OUT_reg_reg[2]
+         U0/ALU_OUT_reg_reg[1]
+         U0/ALU_OUT_reg_reg[0]
+         U0/current_state_reg[0]
+         U0/current_state_reg[2]
+         U0/current_state_reg[3]
+         U0/current_state_reg[1]
+         U1/Reg_File_reg[2][7]
+         U1/Reg_File_reg[1][7]
+         U1/RdData_Valid_reg
+         U1/RdData_reg[7]
+         U1/RdData_reg[6]
+         U1/RdData_reg[5]
+         U1/RdData_reg[4]
+         U1/RdData_reg[3]
+         U1/RdData_reg[2]
+         U1/RdData_reg[1]
+         U1/RdData_reg[0]
+         U1/Reg_File_reg[5][7]
+         U1/Reg_File_reg[5][6]
+         U1/Reg_File_reg[5][5]
+         U1/Reg_File_reg[5][4]
+         U1/Reg_File_reg[5][3]
+         U1/Reg_File_reg[5][2]
+         U1/Reg_File_reg[5][1]
+         U1/Reg_File_reg[5][0]
+         U1/Reg_File_reg[4][7]
+         U1/Reg_File_reg[4][6]
+         U1/Reg_File_reg[4][5]
+         U1/Reg_File_reg[4][4]
+         U1/Reg_File_reg[4][3]
+         U1/Reg_File_reg[4][2]
+         U1/Reg_File_reg[4][1]
+         U1/Reg_File_reg[4][0]
+         U1/Reg_File_reg[7][7]
+         U1/Reg_File_reg[7][6]
+         U1/Reg_File_reg[7][5]
+         U1/Reg_File_reg[7][4]
+         U1/Reg_File_reg[7][3]
+         U1/Reg_File_reg[7][2]
+         U1/Reg_File_reg[7][1]
+         U1/Reg_File_reg[7][0]
+         U1/Reg_File_reg[6][7]
+         U1/Reg_File_reg[6][6]
+         U1/Reg_File_reg[6][5]
+         U1/Reg_File_reg[6][4]
+         U1/Reg_File_reg[6][3]
+         U1/Reg_File_reg[6][2]
+         U1/Reg_File_reg[6][1]
+         U1/Reg_File_reg[6][0]
+         U1/Reg_File_reg[1][3]
+         U1/Reg_File_reg[1][2]
+         U1/Reg_File_reg[2][2]
+         U1/Reg_File_reg[2][4]
+         U1/Reg_File_reg[2][3]
+         U1/Reg_File_reg[3][6]
+         U1/Reg_File_reg[2][0]
+         U1/Reg_File_reg[3][1]
+         U1/Reg_File_reg[3][2]
+         U1/Reg_File_reg[2][1]
+         U1/Reg_File_reg[3][0]
+         U1/Reg_File_reg[3][7]
+         U1/Reg_File_reg[3][5]
+         U1/Reg_File_reg[3][4]
+         U1/Reg_File_reg[3][3]
+         U1/Reg_File_reg[0][7]
+         U1/Reg_File_reg[0][0]
+         U1/Reg_File_reg[0][4]
+         U1/Reg_File_reg[0][3]
+         U1/Reg_File_reg[0][2]
+         U1/Reg_File_reg[0][1]
+         U1/Reg_File_reg[0][6]
+         U1/Reg_File_reg[0][5]
+         U1/Reg_File_reg[1][6]
+         U1/Reg_File_reg[1][1]
+         U1/Reg_File_reg[2][6]
+         U1/Reg_File_reg[2][5]
+         U1/Reg_File_reg[1][0]
+         U1/Reg_File_reg[1][5]
+         U1/Reg_File_reg[1][4]
+         U2/ALU_Valid_reg
+         U2/ALU_OUT_reg[8]
+         U2/ALU_OUT_reg[1]
+         U2/ALU_OUT_reg[14]
+         U2/ALU_OUT_reg[12]
+         U2/ALU_OUT_reg[10]
+         U2/ALU_OUT_reg[15]
+         U2/ALU_OUT_reg[13]
+         U2/ALU_OUT_reg[11]
+         U2/ALU_OUT_reg[9]
+         U2/ALU_OUT_reg[5]
+         U2/ALU_OUT_reg[3]
+         U2/ALU_OUT_reg[6]
+         U2/ALU_OUT_reg[4]
+         U2/ALU_OUT_reg[2]
+         U2/ALU_OUT_reg[7]
+         U2/ALU_OUT_reg[0]
+         U5/Q_reg[0]
+         U5/SYNC_RST_reg
+         U5/Q_reg[1]
+         U7/Q_reg[1]
+         U7/Q_reg[0]
+         U10/div_clk_reg
+         U10/flag_reg
+         U10/counter_reg[7]
+         U10/counter_reg[5]
+         U10/counter_reg[6]
+         U10/counter_reg[4]
+         U10/counter_reg[3]
+         U10/counter_reg[2]
+         U10/counter_reg[0]
+         U10/counter_reg[1]
+         du/Q_reg[1]
+         du/pulse_ff_reg
+         du/enable_pulse_reg
+         du/sync_bus_reg[7]
+         du/Q_reg[0]
+         du/sync_bus_reg[5]
+         du/sync_bus_reg[6]
+         du/sync_bus_reg[0]
+         du/sync_bus_reg[3]
+         du/sync_bus_reg[4]
+         du/sync_bus_reg[1]
+         du/sync_bus_reg[2]
+         U4/dut0/TX_OUT_reg
+         U8/U0/mem_reg[4][7]
+         U8/U0/mem_reg[4][6]
+         U8/U0/mem_reg[4][5]
+         U8/U0/mem_reg[4][4]
+         U8/U0/mem_reg[4][3]
+         U8/U0/mem_reg[4][2]
+         U8/U0/mem_reg[4][1]
+         U8/U0/mem_reg[4][0]
+         U8/U0/mem_reg[7][7]
+         U8/U0/mem_reg[7][6]
+         U8/U0/mem_reg[7][5]
+         U8/U0/mem_reg[7][4]
+         U8/U0/mem_reg[7][3]
+         U8/U0/mem_reg[7][2]
+         U8/U0/mem_reg[7][1]
+         U8/U0/mem_reg[7][0]
+         U8/U0/mem_reg[6][7]
+         U8/U0/mem_reg[6][6]
+         U8/U0/mem_reg[6][5]
+         U8/U0/mem_reg[6][4]
+         U8/U0/mem_reg[6][3]
+         U8/U0/mem_reg[6][2]
+         U8/U0/mem_reg[6][1]
+         U8/U0/mem_reg[6][0]
+         U8/U0/mem_reg[5][7]
+         U8/U0/mem_reg[5][6]
+         U8/U0/mem_reg[5][5]
+         U8/U0/mem_reg[5][4]
+         U8/U0/mem_reg[5][3]
+         U8/U0/mem_reg[5][2]
+         U8/U0/mem_reg[5][1]
+         U8/U0/mem_reg[5][0]
+         U8/U0/mem_reg[3][7]
+         U8/U0/mem_reg[3][6]
+         U8/U0/mem_reg[3][5]
+         U8/U0/mem_reg[3][4]
+         U8/U0/mem_reg[3][3]
+         U8/U0/mem_reg[3][2]
+         U8/U0/mem_reg[3][1]
+         U8/U0/mem_reg[3][0]
+         U8/U0/mem_reg[2][7]
+         U8/U0/mem_reg[2][6]
+         U8/U0/mem_reg[2][5]
+         U8/U0/mem_reg[2][4]
+         U8/U0/mem_reg[2][3]
+         U8/U0/mem_reg[2][2]
+         U8/U0/mem_reg[2][1]
+         U8/U0/mem_reg[2][0]
+         U8/U0/mem_reg[1][7]
+         U8/U0/mem_reg[1][6]
+         U8/U0/mem_reg[1][5]
+         U8/U0/mem_reg[1][4]
+         U8/U0/mem_reg[1][3]
+         U8/U0/mem_reg[1][2]
+         U8/U0/mem_reg[1][1]
+         U8/U0/mem_reg[1][0]
+         U8/U0/mem_reg[0][7]
+         U8/U0/mem_reg[0][6]
+         U8/U0/mem_reg[0][5]
+         U8/U0/mem_reg[0][4]
+         U8/U0/mem_reg[0][3]
+         U8/U0/mem_reg[0][2]
+         U8/U0/mem_reg[0][1]
+         U8/U0/mem_reg[0][0]
+         U8/D0/Q_reg[3]
+         U8/D0/Q_reg[2]
+         U8/D0/Q_reg[1]
+         U8/D0/Q_reg[0]
+         U8/D0/OUT_reg[3]
+         U8/D0/OUT_reg[2]
+         U8/D0/OUT_reg[1]
+         U8/D0/OUT_reg[0]
+         U8/U1/w_gray_out_reg[3]
+         U8/U1/w_gray_out_reg[1]
+         U8/U1/w_gray_out_reg[0]
+         U8/U1/w_gray_out_reg[2]
+         U8/U1/W_PTR_reg[1]
+         U8/U1/W_PTR_reg[0]
+         U8/U1/W_PTR_reg[2]
+         U8/U1/W_PTR_reg[3]
+         U8/U2/R_PTR_reg[2]
+         U8/U2/r_gray_out_reg[3]
+         U8/U2/r_gray_out_reg[0]
+         U8/U2/r_gray_out_reg[1]
+         U8/U2/r_gray_out_reg[2]
+         U8/U2/R_PTR_reg[3]
+         U8/U2/R_PTR_reg[0]
+         U8/U2/R_PTR_reg[1]
+         U4/dut0/S/mem_reg[7]
+         U4/dut0/S/mem_reg[6]
+         U4/dut0/S/mem_reg[5]
+         U4/dut0/S/mem_reg[3]
+         U4/dut0/S/mem_reg[2]
+         U4/dut0/S/mem_reg[1]
+         U4/dut0/S/ser_data_reg
+         U4/dut0/S/mem_reg[4]
+         U4/dut0/S/mem_reg[0]
+         U4/dut0/S/counter_reg[1]
+         U4/dut0/S/counter_reg[2]
+         U4/dut0/S/counter_reg[3]
+         U4/dut0/S/counter_reg[0]
+         U4/dut0/F/busy_reg
+         U4/dut0/F/current_state_reg[2]
+         U4/dut0/F/current_state_reg[1]
+         U4/dut0/F/current_state_reg[0]
+         U4/dut0/P/PAR_BIT_reg
+         U4/dut1/F/current_state_reg[1]
+         U4/dut1/F/current_state_reg[2]
+         U4/dut1/F/current_state_reg[0]
+         U4/dut1/D0/sample3_reg
+         U4/dut1/D0/sample1_reg
+         U4/dut1/D0/sample2_reg
+         U4/dut1/D1/counter_reg[1]
+         U4/dut1/D1/counter_reg[2]
+         U4/dut1/D1/counter_reg[0]
+         U4/dut1/D1/P_DATA_reg[2]
+         U4/dut1/D1/P_DATA_reg[6]
+         U4/dut1/D1/P_DATA_reg[4]
+         U4/dut1/D1/P_DATA_reg[0]
+         U4/dut1/D1/P_DATA_reg[1]
+         U4/dut1/D1/P_DATA_reg[5]
+         U4/dut1/D1/P_DATA_reg[7]
+         U4/dut1/D1/P_DATA_reg[3]
+         U4/dut1/E/BIT_CNT_reg[3]
+         U4/dut1/E/EDGE_CNT_reg[3]
+         U4/dut1/E/EDGE_CNT_reg[1]
+         U4/dut1/E/EDGE_CNT_reg[2]
+         U4/dut1/E/BIT_CNT_reg[1]
+         U4/dut1/E/EDGE_CNT_reg[4]
+         U4/dut1/E/BIT_CNT_reg[2]
+         U4/dut1/E/BIT_CNT_reg[0]
+         U4/dut1/E/EDGE_CNT_reg[0]
+         U4/dut1/P/PAR_ERR_reg
+         U4/dut1/S0/STRT_GLITCH_reg
+         U4/dut1/S1/STP_ERR_reg
+         U6/Q_reg[0]
+         U6/SYNC_RST_reg
+         U6/Q_reg[1]
+         U11/flag_reg
+         U11/counter_reg[7]
+         U11/counter_reg[6]
+         U11/counter_reg[5]
+         U11/counter_reg[4]
+         U11/counter_reg[3]
+         U11/counter_reg[2]
+         U11/div_clk_reg
+         U11/counter_reg[1]
+         U11/counter_reg[0]
+         U8/D1/Q_reg[3]
+         U8/D1/Q_reg[2]
+         U8/D1/Q_reg[1]
+         U8/D1/Q_reg[0]
+         U8/D1/OUT_reg[3]
+         U8/D1/OUT_reg[2]
+         U8/D1/OUT_reg[1]
+         U8/D1/OUT_reg[0]
+
+Information: Test design rule checking completed. (TEST-123)
+1
+############################# Preview DFT ##############################
+preview_dft -show scan_summary
+  Information: Using test design rule information from previous dft_drc run.
+  Architecting Scan Chains
+
+****************************************
+Preview_dft report
+For    : 'Insert_dft' command
+Design : system_top_dft
+Version: K-2015.06
+Date   : Mon Aug 26 17:40:12 2024
+****************************************
+
+Number of chains: 3
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: no_mix
+
+Chain      Scan Ports (si --> so)        # of Cells   Inst/Chain               Clock (port, time, edge)
+-----      ----------------------        ----------   ----------               ------------------------
+S 1        SI[2] -->  SO[2]                     100   U0/ALU_OUT_reg_reg[0]    (scan_clk, 30.0, rising) 
+S 2        SI[1] -->  SO[1]                      99   U2/ALU_OUT_reg[3]        (scan_clk, 30.0, rising) 
+S 3        SI[0] -->  SO[0]                      99   U8/U0/mem_reg[1][5]      (scan_clk, 30.0, rising) 
+1
+############################# Insert DFT ###############################
+insert_dft
+Loading db file '/home/IC/Projects/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/Projects/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/Projects/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+  Information: Using test design rule information from previous dft_drc run.
+  Architecting Scan Chains
+  Routing Scan Chains
+  Routing Global Signals
+  Mapping New Logic
+Resetting current test mode
+  Beginning Mapping Optimizations
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+
+
+  Beginning Phase 1 Design Rule Fixing  (max_transition)  (max_capacitance)
+  ------------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:35  754371.6      0.00       0.0     104.5 du/sync_bus[7]           
+    0:00:35  754371.6      0.00       0.0     104.5 du/sync_bus[7]           
+    0:00:35  754371.6      0.00       0.0     104.5 du/sync_bus[7]           
+    0:00:35  754521.0      0.00       0.0     104.5 U2/ALU_OUT[2]            
+    0:00:35  754670.4      0.00       0.0     104.5 U4/dut0/S/counter[3]     
+    0:00:35  755388.2      0.00       0.0     150.4 SE                       
+    0:00:35  755388.2      0.00       0.0     150.4 SE                       
+    0:00:35  755388.2      0.00       0.0     150.4 SE                       
+    0:00:35  755388.2      0.00       0.0     150.4 SE                       
+    0:00:35  755818.8      0.00       0.0     173.6 net17874                 
+    0:00:35  755818.8      0.00       0.0     173.6 net17874                 
+    0:00:35  755818.8      0.00       0.0     173.6 net17874                 
+    0:00:35  755968.2      0.00       0.0     159.7 net17883                 
+    0:00:35  756117.6      0.00       0.0     159.7 net17888                 
+    0:00:35  756548.2      0.00       0.0     174.7 net17876                 
+    0:00:35  756548.2      0.00       0.0     174.7 net17876                 
+    0:00:35  756548.2      0.00       0.0     174.7 net17876                 
+    0:00:35  756697.6      0.00       0.0     164.1 net17893                 
+    0:00:35  756847.0      0.00       0.0     164.1 net17898                 
+    0:00:35  757564.7      0.00       0.0     164.8 net17873                 
+    0:00:35  757564.7      0.00       0.0     164.8 net17873                 
+    0:00:35  757564.7      0.00       0.0     164.8 net17873                 
+    0:00:35  758138.8      0.00       0.0     169.9 net17875                 
+    0:00:35  758138.8      0.00       0.0     169.9 net17875                 
+    0:00:35  758138.8      0.00       0.0     169.9 net17875                 
+    0:00:35  758288.2      0.00       0.0     166.8 net17913                 
+    0:00:35  758437.6      0.00       0.0     167.0 net17903                 
+    0:00:35  758587.0      0.00       0.0     164.4 net17884                 
+    0:00:35  758736.5      0.00       0.0     164.3 net17904                 
+    0:00:35  758885.9      0.00       0.0     164.2 net17905                 
+    0:00:35  759035.3      0.00       0.0     164.0 net17906                 
+    0:00:35  759465.9      0.00       0.0     162.8 net17872                 
+    0:00:35  759465.9      0.00       0.0     162.8 net17872                 
+    0:00:35  759465.9      0.00       0.0     162.8 net17872                 
+    0:00:35  759896.5      0.00       0.0     161.4 net17902                 
+    0:00:35  759896.5      0.00       0.0     161.4 net17902                 
+    0:00:35  759896.5      0.00       0.0     161.4 net17902                 
+    0:00:35  759752.9      0.00       0.0     160.1 net17914                 
+    0:00:35  759902.4      0.00       0.0     159.5 net17894                 
+    0:00:35  760051.8      0.00       0.0     159.5 net17915                 
+    0:00:35  760201.2      0.00       0.0     159.5 net17882                 
+    0:00:35  760350.6      0.00       0.0     159.5 net17892                 
+    0:00:35  760500.0      0.00       0.0     159.5 net17912                 
+    0:00:35  760649.4      0.00       0.0     159.4 net17934                 
+    0:00:35  760798.8      0.00       0.0     159.4 net17933                 
+    0:00:35  760948.3      0.00       0.0     159.4 net17932                 
+    0:00:35  761097.7      0.00       0.0     159.4 net17940                 
+    0:00:35  761247.1      0.00       0.0     159.4 net17939                 
+    0:00:35  760816.5      0.00       0.0     159.3 net17938                 
+    0:00:35  760965.9      0.00       0.0     159.3 net17920                 
+    0:00:36  761109.4      0.00       0.0     159.3 U4/dut1/D1/counter[1]    
+    0:00:36  761109.4      0.00       0.0     159.3 U4/dut1/D1/counter[1]    
+    0:00:36  761408.3      0.00       0.0     159.3 U4/dut1/S0/STRT_GLITCH   
+    0:00:36  761408.3      0.00       0.0     159.3 U4/dut1/S0/STRT_GLITCH   
+    0:00:36  761408.3      0.00       0.0     159.3 U4/dut1/S0/STRT_GLITCH   
+    0:00:36  761557.7      0.00       0.0     159.2 U4/dut0/F/n25            
+    0:00:36  761557.7      0.00       0.0     159.2 U4/dut0/F/n25            
+    0:00:36  761701.2      0.00       0.0     159.2 U4/dut0/F/current_state[2]
+    0:00:36  761850.6      0.00       0.0     159.2 U11/div_clk              
+    0:00:36  761850.6      0.00       0.0     159.2 U11/div_clk              
+    0:00:36  762000.0      0.00       0.0     159.2 U2/ALU_OUT[1]            
+    0:00:36  762000.0      0.00       0.0     159.2 U2/ALU_OUT[1]            
+    0:00:36  762149.5      0.00       0.0     159.2 U2/ALU_OUT[0]            
+    0:00:36  762293.0      0.00       0.0     159.2 U4/dut0/S/counter[1]     
+    0:00:36  762293.0      0.00       0.0     159.2 U4/dut0/S/counter[1]     
+    0:00:36  762442.4      0.00       0.0     159.2 U2/ALU_OUT[8]            
+    0:00:36  762442.4      0.00       0.0     159.2 U2/ALU_OUT[8]            
+    0:00:36  762591.8      0.00       0.0     159.2 U8/U1/w_gray_out[3]      
+    0:00:36  762591.8      0.00       0.0     159.2 U8/U1/w_gray_out[3]      
+    0:00:36  762741.2      0.00       0.0     159.2 U8/U1/w_gray_out[2]      
+    0:00:36  762741.2      0.00       0.0     159.2 U8/U1/w_gray_out[2]      
+    0:00:36  762890.6      0.00       0.0     159.2 U1/RdData_Valid          
+    0:00:36  762890.6      0.00       0.0     159.2 U1/RdData_Valid          
+    0:00:36  763040.1      0.00       0.0     159.2 du/Q[1]                  
+    0:00:36  763189.5      0.00       0.0     159.2 U8/U0/mem[4][7]          
+    0:00:36  763338.9      0.00       0.0     159.2 U8/U0/mem[4][6]          
+    0:00:36  763488.3      0.00       0.0     159.2 U8/U0/mem[4][5]          
+    0:00:36  763637.7      0.00       0.0     159.2 U8/U0/mem[4][4]          
+    0:00:36  763787.1      0.00       0.0     159.2 U8/U0/mem[4][3]          
+    0:00:36  763936.5      0.00       0.0     159.2 U8/U0/mem[4][2]          
+    0:00:36  764086.0      0.00       0.0     159.2 U8/U0/mem[4][1]          
+    0:00:36  764235.4      0.00       0.0     159.2 U8/U0/mem[4][0]          
+    0:00:36  764384.8      0.00       0.0     159.2 U8/U0/mem[0][7]          
+    0:00:36  764534.2      0.00       0.0     159.2 U8/U0/mem[0][6]          
+    0:00:36  764683.6      0.00       0.0     159.2 U8/U0/mem[0][5]          
+    0:00:36  764833.0      0.00       0.0     159.2 U8/U0/mem[0][4]          
+    0:00:36  764982.4      0.00       0.0     159.2 U8/U0/mem[0][3]          
+    0:00:36  765131.9      0.00       0.0     159.2 U8/U0/mem[0][2]          
+    0:00:36  765281.3      0.00       0.0     159.2 U8/U0/mem[0][1]          
+    0:00:36  765430.7      0.00       0.0     159.2 U8/U0/mem[0][0]          
+    0:00:36  765580.1      0.00       0.0     159.2 U1/Reg_File[4][7]        
+    0:00:36  765729.5      0.00       0.0     159.2 U1/Reg_File[4][6]        
+    0:00:36  765878.9      0.00       0.0     159.2 U1/Reg_File[4][5]        
+    0:00:36  766028.3      0.00       0.0     159.2 U1/Reg_File[4][4]        
+    0:00:36  766177.8      0.00       0.0     159.1 U1/Reg_File[4][3]        
+    0:00:36  766327.2      0.00       0.0     159.1 U1/Reg_File[4][2]        
+    0:00:36  766476.6      0.00       0.0     159.1 U1/Reg_File[4][1]        
+    0:00:36  766626.0      0.00       0.0     159.1 U1/Reg_File[4][0]        
+    0:00:36  766775.4      0.00       0.0     159.1 U8/U0/mem[7][7]          
+    0:00:36  766924.8      0.00       0.0     159.1 U8/U0/mem[7][6]          
+    0:00:36  767074.2      0.00       0.0     159.1 U8/U0/mem[7][5]          
+    0:00:36  767223.7      0.00       0.0     159.1 U8/U0/mem[7][4]          
+    0:00:36  767373.1      0.00       0.0     159.1 U8/U0/mem[7][3]          
+    0:00:36  767522.5      0.00       0.0     159.1 U8/U0/mem[7][2]          
+    0:00:36  767671.9      0.00       0.0     159.1 U8/U0/mem[7][1]          
+    0:00:36  767821.3      0.00       0.0     159.1 U8/U0/mem[7][0]          
+    0:00:36  767970.7      0.00       0.0     159.1 U8/U0/mem[3][7]          
+    0:00:36  768120.1      0.00       0.0     159.1 U8/U0/mem[3][6]          
+    0:00:36  768269.6      0.00       0.0     159.1 U8/U0/mem[3][5]          
+    0:00:36  768419.0      0.00       0.0     159.1 U8/U0/mem[3][4]          
+    0:00:36  768568.4      0.00       0.0     159.1 U8/U0/mem[3][3]          
+    0:00:36  768717.8      0.00       0.0     159.1 U8/U0/mem[3][2]          
+    0:00:36  768867.2      0.00       0.0     159.1 U8/U0/mem[3][1]          
+    0:00:36  769016.6      0.00       0.0     159.1 U8/U0/mem[3][0]          
+    0:00:36  769166.0      0.00       0.0     159.1 U1/Reg_File[7][7]        
+    0:00:36  769315.5      0.00       0.0     159.1 U1/Reg_File[7][6]        
+    0:00:36  769464.9      0.00       0.0     159.1 U1/Reg_File[7][5]        
+    0:00:36  769614.3      0.00       0.0     159.1 U1/Reg_File[7][4]        
+    0:00:36  769763.7      0.00       0.0     159.1 U1/Reg_File[7][3]        
+    0:00:36  769913.1      0.00       0.0     159.1 U1/Reg_File[7][2]        
+    0:00:36  770062.5      0.00       0.0     159.1 U1/Reg_File[7][1]        
+    0:00:36  770211.9      0.00       0.0     159.1 U1/Reg_File[7][0]        
+    0:00:36  770361.4      0.00       0.0     159.1 U8/U1/w_gray_out[1]      
+    0:00:36  770510.8      0.00       0.0     159.1 U8/U1/w_gray_out[0]      
+    0:00:36  770660.2      0.00       0.0     159.1 U8/U2/r_gray_out[0]      
+    0:00:36  770809.6      0.00       0.0     159.1 U8/U2/r_gray_out[1]      
+    0:00:36  770959.0      0.00       0.0     159.1 U8/U2/r_gray_out[2]      
+    0:00:36  771108.4      0.00       0.0     159.1 U8/U2/r_gray_out[3]      
+    0:00:36  771257.8      0.00       0.0     159.1 U8/U0/mem[5][7]          
+    0:00:36  771407.3      0.00       0.0     159.0 U8/U0/mem[5][6]          
+    0:00:36  771556.7      0.00       0.0     159.0 U8/U0/mem[5][5]          
+    0:00:36  771706.1      0.00       0.0     159.0 U8/U0/mem[5][4]          
+    0:00:36  771855.5      0.00       0.0     159.0 U8/U0/mem[5][3]          
+    0:00:36  772004.9      0.00       0.0     159.0 U8/U0/mem[5][2]          
+    0:00:36  772154.3      0.00       0.0     159.0 U8/U0/mem[5][1]          
+    0:00:36  772303.7      0.00       0.0     159.0 U8/U0/mem[5][0]          
+    0:00:36  772453.2      0.00       0.0     159.0 U8/U0/mem[1][7]          
+    0:00:36  772602.6      0.00       0.0     159.0 U8/U0/mem[1][6]          
+    0:00:36  772752.0      0.00       0.0     159.0 U8/U0/mem[1][5]          
+    0:00:36  772901.4      0.00       0.0     159.0 U8/U0/mem[1][4]          
+    0:00:36  773050.8      0.00       0.0     159.0 U8/U0/mem[1][3]          
+    0:00:36  773200.2      0.00       0.0     159.0 U8/U0/mem[1][2]          
+    0:00:36  773349.6      0.00       0.0     159.0 U8/U0/mem[1][1]          
+    0:00:36  773499.1      0.00       0.0     159.0 U8/U0/mem[1][0]          
+    0:00:36  773648.5      0.00       0.0     159.0 U1/Reg_File[5][7]        
+    0:00:36  773797.9      0.00       0.0     159.0 U1/Reg_File[5][6]        
+    0:00:36  773947.3      0.00       0.0     159.0 U1/Reg_File[5][5]        
+    0:00:36  774096.7      0.00       0.0     159.0 U1/Reg_File[5][4]        
+    0:00:36  774246.1      0.00       0.0     159.0 U1/Reg_File[5][3]        
+    0:00:36  774395.5      0.00       0.0     159.0 U1/Reg_File[5][2]        
+    0:00:36  774545.0      0.00       0.0     159.0 U1/Reg_File[5][1]        
+    0:00:36  774694.4      0.00       0.0     159.0 U1/Reg_File[5][0]        
+    0:00:36  774843.8      0.00       0.0     159.0 U8/U0/mem[6][7]          
+    0:00:36  774993.2      0.00       0.0     159.0 U8/U0/mem[6][6]          
+    0:00:36  775142.6      0.00       0.0     159.0 U8/U0/mem[6][5]          
+    0:00:36  775292.0      0.00       0.0     159.0 U8/U0/mem[6][4]          
+    0:00:36  775441.4      0.00       0.0     159.0 U8/U0/mem[6][3]          
+    0:00:36  775590.9      0.00       0.0     159.0 U8/U0/mem[6][2]          
+    0:00:36  775740.3      0.00       0.0     159.0 U8/U0/mem[6][1]          
+    0:00:36  775889.7      0.00       0.0     159.0 U8/U0/mem[6][0]          
+    0:00:36  776039.1      0.00       0.0     159.0 U8/U0/mem[2][7]          
+    0:00:36  776188.5      0.00       0.0     159.0 U8/U0/mem[2][6]          
+    0:00:36  776337.9      0.00       0.0     159.0 U8/U0/mem[2][5]          
+    0:00:36  776487.3      0.00       0.0     159.0 U8/U0/mem[2][4]          
+    0:00:36  776636.8      0.00       0.0     158.9 U8/U0/mem[2][3]          
+    0:00:36  776786.2      0.00       0.0     158.9 U8/U0/mem[2][2]          
+    0:00:36  776935.6      0.00       0.0     158.9 U8/U0/mem[2][1]          
+    0:00:36  777085.0      0.00       0.0     158.9 U8/U0/mem[2][0]          
+    0:00:36  777234.4      0.00       0.0     158.9 U1/Reg_File[6][7]        
+    0:00:36  777383.8      0.00       0.0     158.9 U1/Reg_File[6][6]        
+    0:00:36  777533.2      0.00       0.0     158.9 U1/Reg_File[6][5]        
+    0:00:36  777682.7      0.00       0.0     158.9 U1/Reg_File[6][4]        
+    0:00:36  777832.1      0.00       0.0     158.9 U1/Reg_File[6][3]        
+    0:00:36  777981.5      0.00       0.0     158.9 U1/Reg_File[6][2]        
+    0:00:36  778130.9      0.00       0.0     158.9 U1/Reg_File[6][1]        
+    0:00:36  778280.3      0.00       0.0     158.9 U1/Reg_File[6][0]        
+    0:00:36  778429.7      0.00       0.0     158.9 U2/ALU_OUT[15]           
+    0:00:36  778429.7      0.00       0.0     158.9 U2/ALU_OUT[15]           
+    0:00:36  778579.1      0.00       0.0     158.9 U2/ALU_OUT[14]           
+    0:00:36  778579.1      0.00       0.0     158.9 U2/ALU_OUT[14]           
+    0:00:36  778728.6      0.00       0.0     158.9 U2/ALU_OUT[12]           
+    0:00:36  778728.6      0.00       0.0     158.9 U2/ALU_OUT[12]           
+    0:00:36  778878.0      0.00       0.0     158.9 U2/ALU_OUT[10]           
+    0:00:36  778878.0      0.00       0.0     158.9 U2/ALU_OUT[10]           
+    0:00:36  779027.4      0.00       0.0     158.9 U2/ALU_OUT[13]           
+    0:00:36  779027.4      0.00       0.0     158.9 U2/ALU_OUT[13]           
+    0:00:36  779176.8      0.00       0.0     158.9 U2/ALU_OUT[11]           
+    0:00:36  779176.8      0.00       0.0     158.9 U2/ALU_OUT[11]           
+    0:00:36  779326.2      0.00       0.0     158.9 U2/ALU_OUT[9]            
+    0:00:36  779326.2      0.00       0.0     158.9 U2/ALU_OUT[9]            
+    0:00:36  779475.6      0.00       0.0     158.9 U2/ALU_OUT[5]            
+    0:00:36  779475.6      0.00       0.0     158.9 U2/ALU_OUT[5]            
+    0:00:36  779625.0      0.00       0.0     158.9 U2/ALU_OUT[3]            
+    0:00:36  779625.0      0.00       0.0     158.9 U2/ALU_OUT[3]            
+    0:00:36  779774.5      0.00       0.0     158.9 U2/ALU_OUT[6]            
+    0:00:36  779774.5      0.00       0.0     158.9 U2/ALU_OUT[6]            
+    0:00:36  779923.9      0.00       0.0     158.9 U2/ALU_OUT[4]            
+    0:00:36  779923.9      0.00       0.0     158.9 U2/ALU_OUT[4]            
+    0:00:36  780073.3      0.00       0.0     158.9 U2/ALU_OUT[7]            
+    0:00:36  780073.3      0.00       0.0     158.9 U2/ALU_OUT[7]            
+    0:00:36  780222.7      0.00       0.0     158.9 U4/dut1/D0/sample3       
+    0:00:36  780222.7      0.00       0.0     158.9 U4/dut1/D0/sample3       
+    0:00:36  780372.1      0.00       0.0     158.9 U1/RdData[7]             
+    0:00:36  780521.5      0.00       0.0     158.9 U1/RdData[6]             
+    0:00:36  780670.9      0.00       0.0     158.9 U1/RdData[5]             
+    0:00:36  780820.4      0.00       0.0     158.9 U1/RdData[4]             
+    0:00:36  780969.8      0.00       0.0     158.9 U1/RdData[3]             
+    0:00:36  781119.2      0.00       0.0     158.9 U1/RdData[2]             
+    0:00:36  781268.6      0.00       0.0     158.9 U1/RdData[1]             
+    0:00:36  781418.0      0.00       0.0     158.9 U1/RdData[0]             
+    0:00:36  781567.4      0.00       0.0     158.9 U7/Q[0]                  
+    0:00:36  781716.8      0.00       0.0     158.8 du/net17862              
+    0:00:36  781716.8      0.00       0.0     158.8 du/net17862              
+    0:00:36  782159.2      0.00       0.0     158.5 U4/dut1/E/EDGE_CNT[0]    
+    0:00:36  782159.2      0.00       0.0     158.5 U4/dut1/E/EDGE_CNT[0]    
+    0:00:36  782159.2      0.00       0.0     158.5 U4/dut1/E/EDGE_CNT[0]    
+    0:00:36  782159.2      0.00       0.0     158.5 U4/dut1/E/EDGE_CNT[0]    
+    0:00:36  782159.2      0.00       0.0     158.5 U4/dut1/E/EDGE_CNT[0]    
+    0:00:36  782159.2      0.00       0.0     158.5 U4/dut1/E/EDGE_CNT[0]    
+    0:00:36  782159.2      0.00       0.0     158.5 U4/dut1/E/EDGE_CNT[0]    
+    0:00:36  782159.2      0.00       0.0     158.5 U4/dut1/E/EDGE_CNT[0]    
+    0:00:36  782756.9      0.00       0.0     158.3 U10/counter[3]           
+    0:00:36  782756.9      0.00       0.0     158.3 U10/counter[3]           
+    0:00:36  782756.9      0.00       0.0     158.3 U10/counter[3]           
+    0:00:36  782756.9      0.00       0.0     158.3 U10/counter[3]           
+    0:00:36  782756.9      0.00       0.0     158.3 U10/counter[3]           
+    0:00:36  782756.9      0.00       0.0     158.3 U10/counter[3]           
+    0:00:36  782756.9      0.00       0.0     158.3 U10/counter[3]           
+    0:00:36  782756.9      0.00       0.0     158.3 U10/counter[3]           
+    0:00:36  783354.5      0.00       0.0     158.1 du/sync_bus[6]           
+    0:00:36  783354.5      0.00       0.0     158.1 du/sync_bus[6]           
+    0:00:36  783354.5      0.00       0.0     158.1 du/sync_bus[6]           
+    0:00:36  783354.5      0.00       0.0     158.1 du/sync_bus[6]           
+    0:00:36  783354.5      0.00       0.0     158.1 du/sync_bus[6]           
+    0:00:36  783354.5      0.00       0.0     158.1 du/sync_bus[6]           
+    0:00:36  783354.5      0.00       0.0     158.1 du/sync_bus[6]           
+    0:00:36  783354.5      0.00       0.0     158.1 du/sync_bus[6]           
+    0:00:36  783354.5      0.00       0.0     158.1 du/sync_bus[6]           
+    0:00:36  783952.2      0.00       0.0     158.0 U11/counter[6]           
+    0:00:36  783952.2      0.00       0.0     158.0 U11/counter[6]           
+    0:00:36  783952.2      0.00       0.0     158.0 U11/counter[6]           
+    0:00:36  783952.2      0.00       0.0     158.0 U11/counter[6]           
+    0:00:36  783952.2      0.00       0.0     158.0 U11/counter[6]           
+    0:00:36  783952.2      0.00       0.0     158.0 U11/counter[6]           
+    0:00:36  784251.0      0.00       0.0     157.9 U1/REG3[0]               
+    0:00:36  784251.0      0.00       0.0     157.9 U1/REG3[0]               
+    0:00:36  784251.0      0.00       0.0     157.9 U1/REG3[0]               
+    0:00:36  784101.6      0.00       0.0     142.6 net17890                 
+    0:00:36  784245.1      0.00       0.0     138.9 SE                       
+    0:00:36  784239.2      0.00       0.0     132.6 net17900                 
+    0:00:36  783796.9      0.00       0.0     130.4 net17964                 
+    0:00:36  783946.3      0.00       0.0     129.8 net17932                 
+    0:00:36  783946.3      0.00       0.0     129.8 net17932                 
+    0:00:37  783946.3      0.00       0.0     129.8 net17922                 
+    0:00:37  783796.9      0.00       0.0     128.9 net18282                 
+    0:00:37  783647.5      0.00       0.0     128.9 du/net17862              
+    0:00:37  777806.1      0.00       0.0     103.1 net18280                 
+    0:00:37  777806.1      0.00       0.0     103.1 net18280                 
+    0:00:37  777806.1      0.00       0.0     103.1 net18280                 
+    0:00:37  777955.5      0.00       0.0     102.8 SE                       
+    0:00:37  777806.1      0.00       0.0     102.8 du/sync_bus[7]           
+    0:00:37  777955.5      0.00       0.0     102.2 U1/test_se               
+    0:00:37  778104.9      0.00       0.0     101.7 U1/test_se               
+    0:00:37  778254.3      0.00       0.0     101.1 U1/test_se               
+    0:00:37  778403.8      0.00       0.0     100.6 U1/test_se               
+    0:00:37  778553.2      0.00       0.0     100.0 U1/test_se               
+    0:00:37  778702.6      0.00       0.0      99.5 U8/U0/test_se            
+    0:00:37  778852.0      0.00       0.0      99.0 U1/test_se               
+    0:00:37  779001.4      0.00       0.0      98.4 U8/U0/test_se            
+    0:00:37  779150.8      0.00       0.0      97.9 U1/test_se               
+    0:00:37  779300.3      0.00       0.0      97.3 U8/U0/test_se            
+    0:00:37  779449.7      0.00       0.0      96.8 U1/test_se               
+    0:00:37  779599.1      0.00       0.0      96.3 U8/U0/test_se            
+    0:00:37  779748.5      0.00       0.0      95.7 U1/test_se               
+    0:00:37  779897.9      0.00       0.0      95.2 U8/U0/test_se            
+    0:00:37  780047.3      0.00       0.0      94.6 U1/test_se               
+    0:00:37  780196.8      0.00       0.0      94.1 U8/U0/test_se            
+    0:00:37  780346.2      0.00       0.0      93.6 U1/test_se               
+    0:00:37  780495.6      0.00       0.0      93.0 U8/U0/test_se            
+    0:00:37  780645.0      0.00       0.0      92.5 U1/test_se               
+    0:00:37  780794.4      0.00       0.0      92.0 U8/U0/test_se            
+    0:00:37  780943.8      0.00       0.0      91.4 U1/test_se               
+    0:00:37  781093.2      0.00       0.0      90.9 U8/U0/test_se            
+    0:00:37  781242.7      0.00       0.0      90.3 U1/test_se               
+    0:00:37  781392.1      0.00       0.0      89.8 U8/U0/test_se            
+    0:00:37  781541.5      0.00       0.0      89.3 U1/test_se               
+    0:00:37  781690.9      0.00       0.0      88.7 U8/U0/test_se            
+    0:00:37  781840.3      0.00       0.0      88.2 U1/test_se               
+    0:00:38  781989.7      0.00       0.0      87.7 U8/U0/test_se            
+    0:00:38  782139.2      0.00       0.0      87.1 U1/test_se               
+    0:00:38  782288.6      0.00       0.0      86.6 U8/U0/test_se            
+    0:00:38  782438.0      0.00       0.0      86.0 U1/test_se               
+    0:00:38  782587.4      0.00       0.0      85.5 U8/U0/test_se            
+    0:00:38  782736.8      0.00       0.0      85.0 U1/test_se               
+    0:00:38  782886.2      0.00       0.0      84.4 U8/U0/test_se            
+    0:00:38  783035.6      0.00       0.0      83.9 U1/test_se               
+    0:00:38  783185.1      0.00       0.0      83.4 U8/U0/test_se            
+    0:00:38  783334.5      0.00       0.0      82.8 U1/test_se               
+    0:00:38  783483.9      0.00       0.0      82.3 U8/U0/test_se            
+    0:00:38  783633.3      0.00       0.0      81.8 U1/test_se               
+    0:00:38  783782.7      0.00       0.0      81.2 U8/U0/test_se            
+    0:00:38  783932.1      0.00       0.0      80.7 U1/test_se               
+    0:00:38  784081.6      0.00       0.0      80.2 U8/U0/test_se            
+    0:00:38  784231.0      0.00       0.0      79.6 U1/test_se               
+    0:00:38  784828.6      0.00       0.0      79.3 U8/U0/test_se            
+    0:00:38  784828.6      0.00       0.0      79.3 U8/U0/test_se            
+    0:00:38  784828.6      0.00       0.0      79.3 U8/U0/test_se            
+    0:00:38  785426.3      0.00       0.0      79.0 U0/test_se               
+    0:00:38  785426.3      0.00       0.0      79.0 U0/test_se               
+    0:00:38  785426.3      0.00       0.0      79.0 U0/test_se               
+    0:00:38  786024.0      0.00       0.0      77.7 U2/test_se               
+    0:00:38  786024.0      0.00       0.0      77.7 U2/test_se               
+    0:00:38  786024.0      0.00       0.0      77.7 U2/test_se               
+    0:00:38  786621.6      0.00       0.0      75.9 U4/dut0/S/test_se        
+    0:00:38  786621.6      0.00       0.0      75.9 U4/dut0/S/test_se        
+    0:00:38  786621.6      0.00       0.0      75.9 U4/dut0/S/test_se        
+    0:00:38  787219.3      0.00       0.0      74.0 du/test_se               
+    0:00:38  787219.3      0.00       0.0      74.0 du/test_se               
+    0:00:38  787219.3      0.00       0.0      74.0 du/test_se               
+    0:00:38  787817.0      0.00       0.0      72.2 U4/dut1/D1/test_se       
+    0:00:38  787817.0      0.00       0.0      72.2 U4/dut1/D1/test_se       
+    0:00:38  787817.0      0.00       0.0      72.2 U4/dut1/D1/test_se       
+    0:00:38  787817.0      0.00       0.0      72.2 U4/dut1/D1/test_se       
+    0:00:38  788414.6      0.00       0.0      70.5 U10/test_se              
+    0:00:38  788414.6      0.00       0.0      70.5 U10/test_se              
+    0:00:38  788414.6      0.00       0.0      70.5 U10/test_se              
+    0:00:38  789012.3      0.00       0.0      68.9 U11/test_se              
+    0:00:38  789012.3      0.00       0.0      68.9 U11/test_se              
+    0:00:38  789012.3      0.00       0.0      68.9 U11/test_se              
+    0:00:38  789460.5      0.00       0.0      67.4 U4/dut1/E/test_se        
+    0:00:38  789460.5      0.00       0.0      67.4 U4/dut1/E/test_se        
+    0:00:38  789460.5      0.00       0.0      67.4 U4/dut1/E/test_se        
+    0:00:38  789908.8      0.00       0.0      66.1 U8/D0/test_se            
+    0:00:38  789908.8      0.00       0.0      66.1 U8/D0/test_se            
+    0:00:38  789908.8      0.00       0.0      66.1 U8/D0/test_se            
+    0:00:38  790357.0      0.00       0.0      64.8 U8/D1/test_se            
+    0:00:38  790357.0      0.00       0.0      64.8 U8/D1/test_se            
+    0:00:38  790357.0      0.00       0.0      64.8 U8/D1/test_se            
+    0:00:38  790805.3      0.00       0.0      63.5 U8/U1/test_se            
+    0:00:38  790805.3      0.00       0.0      63.5 U8/U1/test_se            
+    0:00:38  790805.3      0.00       0.0      63.5 U8/U1/test_se            
+    0:00:38  791253.5      0.00       0.0      62.2 U8/U2/test_se            
+    0:00:38  791253.5      0.00       0.0      62.2 U8/U2/test_se            
+    0:00:38  791253.5      0.00       0.0      62.2 U8/U2/test_se            
+    0:00:38  791851.2      0.00       0.0      61.2 U4/dut1/test_se          
+    0:00:38  791851.2      0.00       0.0      61.2 U4/dut1/test_se          
+    0:00:38  791851.2      0.00       0.0      61.2 U4/dut1/test_se          
+    0:00:38  792448.8      0.00       0.0      60.6 U8/test_se               
+    0:00:38  792448.8      0.00       0.0      60.6 U8/test_se               
+    0:00:38  792448.8      0.00       0.0      60.6 U8/test_se               
+    0:00:38  792747.6      0.00       0.0      59.9 U4/dut0/F/test_se        
+    0:00:38  792747.6      0.00       0.0      59.9 U4/dut0/F/test_se        
+    0:00:38  792747.6      0.00       0.0      59.9 U4/dut0/F/test_se        
+    0:00:38  793046.5      0.00       0.0      59.3 U10/test_se              
+    0:00:38  793046.5      0.00       0.0      59.3 U10/test_se              
+    0:00:38  793046.5      0.00       0.0      59.3 U10/test_se              
+    0:00:38  793345.3      0.00       0.0      58.7 U11/test_se              
+    0:00:38  793345.3      0.00       0.0      58.7 U11/test_se              
+    0:00:38  793345.3      0.00       0.0      58.7 U11/test_se              
+    0:00:38  793644.1      0.00       0.0      58.1 U4/dut0/S/test_se        
+    0:00:38  793644.1      0.00       0.0      58.1 U4/dut0/S/test_se        
+    0:00:38  793644.1      0.00       0.0      58.1 U4/dut0/S/test_se        
+    0:00:38  793943.0      0.00       0.0      57.1 U4/dut0/test_se          
+    0:00:38  793943.0      0.00       0.0      57.1 U4/dut0/test_se          
+    0:00:38  793943.0      0.00       0.0      57.1 U4/dut0/test_se          
+    0:00:38  794241.8      0.00       0.0      56.5 du/test_se               
+    0:00:38  794241.8      0.00       0.0      56.5 du/test_se               
+    0:00:38  794241.8      0.00       0.0      56.5 du/test_se               
+    0:00:38  794540.6      0.00       0.0      56.0 U4/dut1/test_se          
+    0:00:38  794540.6      0.00       0.0      56.0 U4/dut1/test_se          
+    0:00:38  794540.6      0.00       0.0      56.0 U4/dut1/test_se          
+    0:00:39  794839.4      0.00       0.0      55.5 U8/test_se               
+    0:00:39  794839.4      0.00       0.0      55.5 U8/test_se               
+    0:00:39  794839.4      0.00       0.0      55.5 U8/test_se               
+    0:00:39  795138.3      0.00       0.0      55.0 U2/test_se               
+    0:00:39  795138.3      0.00       0.0      55.0 U2/test_se               
+    0:00:39  795138.3      0.00       0.0      55.0 U2/test_se               
+    0:00:39  795437.1      0.00       0.0      54.7 U0/test_se               
+    0:00:39  795437.1      0.00       0.0      54.7 U0/test_se               
+    0:00:39  795437.1      0.00       0.0      54.7 U0/test_se               
+    0:00:39  795586.5      0.00       0.0      54.2 U5/test_se               
+    0:00:39  795735.9      0.00       0.0      53.7 U6/test_se               
+    0:00:39  795885.3      0.00       0.0      53.4 U10/test_se              
+    0:00:39  796034.8      0.00       0.0      53.0 U11/test_se              
+    0:00:39  796184.2      0.00       0.0      52.7 U4/dut0/test_se          
+    0:00:39  796333.6      0.00       0.0      52.4 du/test_se               
+    0:00:39  796483.0      0.00       0.0      52.1 U4/dut1/test_se          
+    0:00:39  796632.4      0.00       0.0      51.7 U8/test_se               
+    0:00:39  796781.8      0.00       0.0      51.4 U4/test_se               
+    0:00:39  796931.2      0.00       0.0      51.1 U2/test_se               
+    0:00:39  797080.7      0.00       0.0      50.7 U0/test_se               
+    0:00:39  797528.9      0.00       0.0      48.6 U8/U0/net18377           
+    0:00:39  797528.9      0.00       0.0      48.6 U8/U0/net18377           
+    0:00:39  797528.9      0.00       0.0      48.6 U8/U0/net18377           
+    0:00:39  797977.1      0.00       0.0      46.4 U8/U0/net18376           
+    0:00:39  797977.1      0.00       0.0      46.4 U8/U0/net18376           
+    0:00:39  797977.1      0.00       0.0      46.4 U8/U0/net18376           
+    0:00:39  797977.1      0.00       0.0      46.4 U8/U0/net18376           
+    0:00:39  798276.0      0.00       0.0      45.4 U8/U0/test_se            
+    0:00:39  798276.0      0.00       0.0      45.4 U8/U0/test_se            
+    0:00:39  798276.0      0.00       0.0      45.4 U8/U0/test_se            
+    0:00:39  798574.8      0.00       0.0      42.9 U0/net18392              
+    0:00:39  798574.8      0.00       0.0      42.9 U0/net18392              
+    0:00:39  798873.6      0.00       0.0      40.5 U0/net18395              
+    0:00:39  798873.6      0.00       0.0      40.5 U0/net18395              
+    0:00:39  798873.6      0.00       0.0      40.5 du/sync_bus[7]           
+    0:00:39  799160.7      0.00       0.0      40.4 U0/RX_P_DATA[7]          
+    0:00:39  799608.9      0.00       0.0      38.7 U8/U0/net18379           
+    0:00:39  799608.9      0.00       0.0      38.7 U8/U0/net18379           
+    0:00:39  799608.9      0.00       0.0      38.7 U8/U0/net18379           
+    0:00:39  800057.2      0.00       0.0      36.9 U8/U0/net18378           
+    0:00:39  800057.2      0.00       0.0      36.9 U8/U0/net18378           
+    0:00:39  800057.2      0.00       0.0      36.9 U8/U0/net18378           
+    0:00:39  800206.6      0.00       0.0      35.5 U2/net18400              
+    0:00:39  800206.6      0.00       0.0      35.5 U2/net18400              
+    0:00:39  800493.7      0.00       0.0      35.5 U0/ALU_OUT[2]            
+    0:00:39  800792.5      0.00       0.0      34.4 U4/dut1/D1/test_se       
+    0:00:39  800792.5      0.00       0.0      34.4 U4/dut1/D1/test_se       
+    0:00:39  800792.5      0.00       0.0      34.4 U4/dut1/D1/test_se       
+    0:00:39  800941.9      0.00       0.0      33.4 U8/U2/test_se            
+    0:00:39  801240.7      0.00       0.0      32.6 U4/dut0/S/net18408       
+    0:00:39  801240.7      0.00       0.0      32.6 U4/dut0/S/net18408       
+    0:00:39  801240.7      0.00       0.0      32.6 U4/dut0/S/net18408       
+    0:00:39  801539.6      0.00       0.0      32.0 U4/dut1/D0/test_se       
+    0:00:39  801539.6      0.00       0.0      32.0 U4/dut1/D0/test_se       
+    0:00:39  801539.6      0.00       0.0      32.0 U4/dut1/D0/test_se       
+    0:00:39  801689.0      0.00       0.0      31.0 U2/net18403              
+    0:00:39  801689.0      0.00       0.0      31.0 U2/net18403              
+    0:00:39  801838.4      0.00       0.0      30.4 U4/dut1/E/test_se        
+    0:00:39  801987.8      0.00       0.0      29.4 U0/net18531              
+    0:00:39  801987.8      0.00       0.0      29.4 U0/net18531              
+    0:00:39  802286.6      0.00       0.0      29.2 U4/dut1/F/STP_ERR        
+    0:00:39  802286.6      0.00       0.0      29.2 U4/dut1/F/STP_ERR        
+    0:00:39  802286.6      0.00       0.0      29.2 U4/dut1/F/STP_ERR        
+    0:00:39  802436.0      0.00       0.0      29.0 U4/dut0/S/net18410       
+    0:00:39  802585.5      0.00       0.0      28.8 U4/dut0/S/net18409       
+    0:00:39  802585.5      0.00       0.0      28.8 U4/dut0/S/net18409       
+    0:00:39  802734.9      0.00       0.0      28.6 U1/net18290              
+    0:00:39  802884.3      0.00       0.0      28.4 U4/dut1/D1/net18427      
+    0:00:39  802884.3      0.00       0.0      28.4 U4/dut1/D1/net18427      
+    0:00:39  803033.7      0.00       0.0      28.2 U4/dut1/D1/net18426      
+    0:00:39  803183.1      0.00       0.0      28.0 U1/net18370              
+    0:00:39  803332.5      0.00       0.0      27.8 U8/D0/net18454           
+    0:00:39  803481.9      0.00       0.0      27.7 U8/D1/net18460           
+    0:00:39  803631.4      0.00       0.0      27.5 U10/net18432             
+    0:00:39  803780.8      0.00       0.0      27.3 U11/net18441             
+    0:00:39  803930.2      0.00       0.0      27.2 U11/net18440             
+    0:00:39  804079.6      0.00       0.0      26.9 du/net18416              
+    0:00:39  804079.6      0.00       0.0      26.9 du/net18416              
+    0:00:39  804229.0      0.00       0.0      26.8 U5/net18534              
+    0:00:39  804378.4      0.00       0.0      26.6 U8/D0/net18455           
+    0:00:39  804527.8      0.00       0.0      26.4 U8/D1/net18461           
+    0:00:39  804677.3      0.00       0.0      26.3 U10/net18433             
+    0:00:39  804826.7      0.00       0.0      26.1 U8/U2/net18472           
+    0:00:39  804976.1      0.00       0.0      25.9 du/net18419              
+    0:00:39  804976.1      0.00       0.0      25.9 du/net18419              
+    0:00:39  805125.5      0.00       0.0      25.7 U2/net18400              
+    0:00:39  805274.9      0.00       0.0      25.5 U0/net18394              
+    0:00:39  805424.3      0.00       0.0      25.4 U6/net18536              
+    0:00:39  805573.7      0.00       0.0      25.2 U8/U0/net18300           
+    0:00:39  805723.2      0.00       0.0      25.0 U8/U0/net18308           
+    0:00:39  805872.6      0.00       0.0      24.9 U8/U0/net18316           
+    0:00:39  806022.0      0.00       0.0      24.7 U8/U0/net18324           
+    0:00:39  806171.4      0.00       0.0      24.5 U8/U0/net18332           
+    0:00:39  806320.8      0.00       0.0      24.3 U8/U0/net18340           
+    0:00:39  806470.2      0.00       0.0      24.2 U8/U0/net18348           
+    0:00:39  806619.6      0.00       0.0      24.0 U8/U0/net18356           
+    0:00:39  806769.1      0.00       0.0      23.8 U8/U0/net18364           
+    0:00:39  806918.5      0.00       0.0      23.7 U8/U0/net18372           
+    0:00:39  807067.9      0.00       0.0      23.5 U2/net18403              
+    0:00:39  807217.3      0.00       0.0      23.3 U2/net18402              
+    0:00:39  807366.7      0.00       0.0      23.2 U2/net18401              
+    0:00:39  807516.1      0.00       0.0      23.0 U2/net18596              
+    0:00:39  807665.5      0.00       0.0      22.8 U1/net18294              
+    0:00:39  807815.0      0.00       0.0      22.6 U1/net18298              
+    0:00:39  807964.4      0.00       0.0      22.5 U1/net18306              
+    0:00:39  808113.8      0.00       0.0      22.3 U1/net18314              
+    0:00:39  808263.2      0.00       0.0      22.1 U1/net18322              
+    0:00:39  808412.6      0.00       0.0      22.0 U1/net18330              
+    0:00:39  808562.0      0.00       0.0      21.8 U1/net18338              
+    0:00:39  808711.4      0.00       0.0      21.6 U1/net18346              
+    0:00:39  808860.9      0.00       0.0      21.5 U0/net18573              
+    0:00:39  809010.3      0.00       0.0      21.2 U0/net18572              
+    0:00:39  809010.3      0.00       0.0      21.2 U0/net18572              
+    0:00:39  809159.7      0.00       0.0      21.1 U0/net18577              
+    0:00:39  809309.1      0.00       0.0      20.9 U0/net18576              
+    0:00:39  809458.5      0.00       0.0      20.7 U4/dut1/F/test_se        
+    0:00:39  809607.9      0.00       0.0      20.6 U8/U1/net18466           
+    0:00:39  809757.3      0.00       0.0      20.4 U8/U2/net18473           
+    0:00:39  809906.8      0.00       0.0      20.2 U8/U1/net18467           
+    0:00:39  810056.2      0.00       0.0      20.0 U0/net18395              
+    0:00:39  810205.6      0.00       0.0      19.9 U0/net18392              
+    0:00:39  810355.0      0.00       0.0      19.7 U4/dut1/E/net18449       
+    0:00:39  810504.4      0.00       0.0      19.5 U4/dut1/E/net18448       
+    0:00:39  810653.8      0.00       0.0      19.4 U4/dut1/E/net18450       
+    0:00:39  810803.2      0.00       0.0      19.2 U1/net18354              
+    0:00:39  810952.7      0.00       0.0      19.0 U1/net18362              
+    0:00:39  811102.1      0.00       0.0      18.9 U1/net18374              
+    0:00:39  811251.5      0.00       0.0      18.7 U8/U0/net18304           
+    0:00:39  811400.9      0.00       0.0      18.6 U8/U0/net18312           
+    0:00:39  811550.3      0.00       0.0      18.4 U8/U0/net18320           
+    0:00:39  811699.7      0.00       0.0      18.3 U8/U0/net18328           
+    0:00:39  811849.1      0.00       0.0      18.1 U8/U0/net18336           
+    0:00:39  811998.6      0.00       0.0      18.0 U8/U0/net18344           
+    0:00:39  812148.0      0.00       0.0      17.8 U8/U0/net18352           
+    0:00:39  812297.4      0.00       0.0      17.7 U8/U0/net18360           
+    0:00:39  812446.8      0.00       0.0      17.5 U8/U0/net18368           
+    0:00:39  812596.2      0.00       0.0      17.4 U8/U0/net18556           
+    0:00:39  812745.6      0.00       0.0      17.2 U1/net18292              
+    0:00:39  812596.2      0.00       0.0      17.2 U1/net18296              
+    0:00:39  812745.6      0.00       0.0      17.0 U1/net18742              
+    0:00:39  812895.0      0.00       0.0      16.9 U1/net18764              
+    0:00:39  813044.5      0.00       0.0      16.7 U1/net18302              
+    0:00:39  813193.9      0.00       0.0      16.6 U1/net18310              
+    0:00:39  813044.5      0.00       0.0      16.5 U1/net18318              
+    0:00:39  813193.9      0.00       0.0      16.4 U1/net18770              
+    0:00:39  813343.3      0.00       0.0      16.2 U1/net18772              
+    0:00:39  813193.9      0.00       0.0      16.1 U1/net18326              
+    0:00:39  813343.3      0.00       0.0      16.0 U1/net18334              
+    0:00:39  813492.7      0.00       0.0      15.8 U1/net18342              
+    0:00:39  813642.1      0.00       0.0      15.7 U1/net18764              
+    0:00:39  813492.7      0.00       0.0      15.6 U1/net18350              
+    0:00:39  813642.1      0.00       0.0      15.5 U1/net18778              
+    0:00:39  813791.5      0.00       0.0      15.3 U1/net18780              
+    0:00:39  813940.9      0.00       0.0      15.2 U1/net18358              
+    0:00:39  814090.4      0.00       0.0      15.0 U1/net18366              
+    0:00:39  814239.8      0.00       0.0      14.9 U4/dut0/F/test_se        
+    0:00:39  814389.2      0.00       0.0      14.7 U4/dut0/S/test_se        
+    0:00:39  814239.8      0.00       0.0      14.7 U1/net18292              
+    0:00:39  814389.2      0.00       0.0      14.5 U1/net18790              
+    0:00:39  814389.2      0.00       0.0      14.4 U4/dut1/D0/test_se       
+    0:00:39  814538.6      0.00       0.0      14.2 U4/dut1/D1/test_se       
+    0:00:39  814688.0      0.00       0.0      14.1 U8/D0/test_se            
+    0:00:39  814837.4      0.00       0.0      14.0 U8/D1/test_se            
+    0:00:39  814986.8      0.00       0.0      13.9 U4/dut1/D1/net18602      
+    0:00:39  815136.3      0.00       0.0      13.8 U4/dut0/S/net18506       
+    0:00:39  815285.7      0.00       0.0      13.7 U8/U1/test_se            
+    0:00:39  815435.1      0.00       0.0      13.6 U8/U2/net18606           
+    0:00:39  815584.5      0.00       0.0      13.5 U4/dut1/E/net18618       
+    0:00:39  815733.9      0.00       0.0      13.3 du/net18515              
+    0:00:39  815733.9      0.00       0.0      13.3 du/net18515              
+    0:00:39  815883.3      0.00       0.0      13.2 du/net18544              
+    0:00:39  816032.7      0.00       0.0      13.1 U8/U0/net18379           
+    0:00:39  816032.7      0.00       0.0      13.1 U8/U0/net18379           
+    0:00:39  816182.2      0.00       0.0      13.0 U8/U0/net18378           
+    0:00:39  816331.6      0.00       0.0      12.9 U8/U0/net18376           
+    0:00:39  816481.0      0.00       0.0      12.8 U8/U0/net18562           
+    0:00:39  816630.4      0.00       0.0      12.7 U8/U0/net18568           
+    0:00:39  816779.8      0.00       0.0      12.6 U2/net18527              
+    0:00:39  816779.8      0.00       0.0      12.6 U2/net18527              
+    0:00:39  816929.2      0.00       0.0      12.4 U2/net18552              
+    0:00:39  817078.6      0.00       0.0      12.3 U1/net18302              
+    0:00:39  817228.1      0.00       0.0      12.2 U1/net18310              
+    0:00:39  817377.5      0.00       0.0      12.1 U1/net18334              
+    0:00:39  817526.9      0.00       0.0      12.0 U1/net18342              
+    0:00:39  817676.3      0.00       0.0      11.9 U1/net18358              
+    0:00:40  817825.7      0.00       0.0      11.8 U1/net18374              
+    0:00:40  817975.1      0.00       0.0      11.7 U0/net18531              
+    0:00:40  818124.5      0.00       0.0      11.6 U0/net18530              
+    0:00:40  818274.0      0.00       0.0      11.4 U0/net18554              
+    0:00:40  818423.4      0.00       0.0      11.3 U0/net18620              
+    0:00:40  818722.2      0.00       0.0      11.2 U8/net18486              
+    0:00:40  818722.2      0.00       0.0      11.2 U8/net18486              
+    0:00:40  818722.2      0.00       0.0      11.2 U8/net18486              
+    0:00:40  818871.6      0.00       0.0      10.7 SE                       
+    0:00:40  819021.0      0.00       0.0      10.1 SE                       
+    0:00:40  819170.4      0.00       0.0       9.8 SE                       
+    0:00:40  819170.4      0.00       0.0       9.6 SE                       
+    0:00:40  819170.4      0.00       0.0       9.4 SE                       
+    0:00:40  819469.3      0.00       0.0       8.8 RX_P_DATA[7]             
+    0:00:40  819469.3      0.00       0.0       8.8 RX_P_DATA[7]             
+    0:00:40  819469.3      0.00       0.0       8.8 RX_P_DATA[7]             
+    0:00:40  819768.1      0.00       0.0       8.3 ALU_OUT[2]               
+    0:00:40  819768.1      0.00       0.0       8.3 ALU_OUT[2]               
+    0:00:40  819768.1      0.00       0.0       8.3 ALU_OUT[2]               
+    0:00:40  819917.5      0.00       0.0       8.1 net18288                 
+    0:00:40  820066.9      0.00       0.0       8.0 net18856                 
+    0:00:40  820216.3      0.00       0.0       7.9 net18858                 
+    0:00:40  820365.8      0.00       0.0       7.8 net18860                 
+    0:00:40  820216.3      0.00       0.0       7.8 RX_P_DATA[7]             
+    0:00:40  820814.0      0.00       0.0       7.5 U1/test_se               
+    0:00:40  820814.0      0.00       0.0       7.5 U1/test_se               
+    0:00:40  820814.0      0.00       0.0       7.5 U1/test_se               
+    0:00:40  821112.8      0.00       0.0       5.1 U1/net18881              
+    0:00:40  821112.8      0.00       0.0       5.1 U1/net18881              
+    0:00:40  821399.9      0.00       0.0       5.1 U0/test_se               
+    0:00:40  821687.0      0.00       0.0       5.1 U4/test_se               
+    0:00:40  822135.2      0.00       0.0       4.1 U1/test_se               
+    0:00:40  822135.2      0.00       0.0       4.1 U1/test_se               
+    0:00:40  822135.2      0.00       0.0       4.1 U1/test_se               
+    0:00:40  822434.0      0.00       0.0       3.4 U1/net18878              
+    0:00:40  822434.0      0.00       0.0       3.4 U1/net18878              
+    0:00:40  822434.0      0.00       0.0       3.4 U1/net18878              
+    0:00:40  822732.9      0.00       0.0       2.6 U1/net18881              
+    0:00:40  822732.9      0.00       0.0       2.6 U1/net18881              
+    0:00:40  822732.9      0.00       0.0       2.6 U1/net18881              
+    0:00:40  823163.4      0.00       0.0       2.4 U1/test_se               
+    0:00:40  823163.4      0.00       0.0       2.4 U1/test_se               
+    0:00:40  823163.4      0.00       0.0       2.4 U1/test_se               
+    0:00:40  823450.5      0.00       0.0       2.2 U4/dut1/STP_ERR          
+    0:00:40  823599.9      0.00       0.0       2.1 U1/net18880              
+    0:00:40  823749.3      0.00       0.0       1.9 U1/net18879              
+    0:00:40  823898.7      0.00       0.0       1.7 U1/net18887              
+    0:00:40  823898.7      0.00       0.0       1.7 U1/net18887              
+    0:00:40  824048.2      0.00       0.0       1.6 U1/net18900              
+    0:00:40  824335.2      0.00       0.0       1.6 U4/dut1/S1/STP_ERR       
+
+
+  Beginning Phase 2 Design Rule Fixing  (max_transition)  (max_capacitance)
+  ------------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:40  824335.2      0.00       0.0       1.6 U4/dut1/F/STP_ERR        
+    0:00:40  824341.1      0.00       0.0       1.6 U1/net18913              
+    0:00:40  824639.9      0.00       0.0       1.6 du/sync_bus[7]           
+    0:00:40  824639.9      0.00       0.0       1.6 du/sync_bus[7]           
+    0:00:40  824639.9      0.00       0.0       1.6 du/sync_bus[7]           
+    0:00:40  824789.4      0.00       0.0       1.6 U1/test_se               
+
+1
+######################## Optimize Logic post DFT #######################
+compile -scan -incremental
+Information: Choosing a test methodology will restrict the optimization of sequential cells. (UIO-12)
+
+Information: There are 76 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition scmetro_tsmc_cl013g_rvt_ss_1p08v_125c set on design system_top_dft has different process,
+voltage and temperatures parameters than the parameters at which target library 
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+  Selecting implementations
+  Selecting implementations
+  Selecting implementations
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03  824789.4      0.00       0.0       1.6                          
+    0:00:04  824789.4      0.00       0.0       1.6                          
+    0:00:07  823496.4      0.00       0.0       6.0                          
+    0:00:10  822095.3      0.00       0.0      31.7                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:10  822095.3      0.00       0.0      31.7                          
+    0:00:11  825796.5      0.00       0.0       7.2 U1/REG0[4]               
+    0:00:11  828102.4      0.00       0.0       0.0                          
+Loading db file '/home/IC/Projects/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/Projects/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/Projects/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+###################### Design Rule Checking post DFT ###################
+dft_drc -verbose -coverage_estimate
+In mode: Internal_scan...
+  Design has scan chains in this mode
+  Design is scan routed
+  Post-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking vector rules...
+  ...checking clock rules...
+  ...checking scan chain rules...
+  ...checking scan compression rules...
+  ...checking X-state rules...
+  ...checking tristate rules...
+  ...extracting scan details...
+
+-----------------------------------------------------------------
+Begin Other violations...
+
+Warning: Cell U3/U0_TLATNCAX12M has constant 1 value. (TEST-505)
+
+Other violations completed...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 1
+
+-----------------------------------------------------------------
+
+1 OTHER VIOLATION
+     1 Cell is constant 1 violation (TEST-505)
+
+
+Warning: Violations occurred during test design rule checking. (TEST-124)
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  1 out of 299 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+      *   1 cell has constant 1 value
+         U3/U0_TLATNCAX12M
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      * 298 cells are valid scan cells
+         U0/current_state_reg[3]
+         U0/Address_reg_reg[2]
+         U0/Address_reg_reg[1]
+         U0/Address_reg_reg[0]
+         U0/Address_reg_reg[3]
+         U0/ALU_OUT_reg_reg[15]
+         U0/ALU_OUT_reg_reg[14]
+         U0/ALU_OUT_reg_reg[13]
+         U0/ALU_OUT_reg_reg[12]
+         U0/ALU_OUT_reg_reg[11]
+         U0/ALU_OUT_reg_reg[10]
+         U0/ALU_OUT_reg_reg[9]
+         U0/ALU_OUT_reg_reg[8]
+         U0/ALU_OUT_reg_reg[7]
+         U0/ALU_OUT_reg_reg[6]
+         U0/ALU_OUT_reg_reg[5]
+         U0/ALU_OUT_reg_reg[4]
+         U0/ALU_OUT_reg_reg[3]
+         U0/ALU_OUT_reg_reg[2]
+         U0/ALU_OUT_reg_reg[1]
+         U0/ALU_OUT_reg_reg[0]
+         U0/current_state_reg[0]
+         U0/current_state_reg[1]
+         U0/current_state_reg[2]
+         U1/Reg_File_reg[2][7]
+         U1/RdData_reg[7]
+         U1/RdData_reg[6]
+         U1/RdData_reg[5]
+         U1/RdData_reg[4]
+         U1/RdData_reg[3]
+         U1/RdData_reg[2]
+         U1/RdData_reg[1]
+         U1/RdData_reg[0]
+         U1/Reg_File_reg[5][7]
+         U1/Reg_File_reg[5][6]
+         U1/Reg_File_reg[5][5]
+         U1/Reg_File_reg[5][4]
+         U1/Reg_File_reg[5][3]
+         U1/Reg_File_reg[5][2]
+         U1/Reg_File_reg[5][1]
+         U1/Reg_File_reg[5][0]
+         U1/Reg_File_reg[4][7]
+         U1/Reg_File_reg[4][6]
+         U1/Reg_File_reg[4][5]
+         U1/Reg_File_reg[4][4]
+         U1/Reg_File_reg[4][3]
+         U1/Reg_File_reg[4][2]
+         U1/Reg_File_reg[4][1]
+         U1/Reg_File_reg[4][0]
+         U1/Reg_File_reg[7][7]
+         U1/Reg_File_reg[7][6]
+         U1/Reg_File_reg[7][5]
+         U1/Reg_File_reg[7][4]
+         U1/Reg_File_reg[7][3]
+         U1/Reg_File_reg[7][2]
+         U1/Reg_File_reg[7][1]
+         U1/Reg_File_reg[7][0]
+         U1/Reg_File_reg[6][7]
+         U1/Reg_File_reg[6][6]
+         U1/Reg_File_reg[6][5]
+         U1/Reg_File_reg[6][4]
+         U1/Reg_File_reg[6][3]
+         U1/Reg_File_reg[6][2]
+         U1/Reg_File_reg[6][1]
+         U1/Reg_File_reg[6][0]
+         U1/Reg_File_reg[1][3]
+         U1/Reg_File_reg[1][2]
+         U1/Reg_File_reg[2][2]
+         U1/Reg_File_reg[2][4]
+         U1/Reg_File_reg[2][3]
+         U1/Reg_File_reg[3][6]
+         U1/Reg_File_reg[2][0]
+         U1/Reg_File_reg[3][1]
+         U1/Reg_File_reg[3][2]
+         U1/Reg_File_reg[3][0]
+         U1/Reg_File_reg[3][7]
+         U1/Reg_File_reg[3][5]
+         U1/Reg_File_reg[3][4]
+         U1/Reg_File_reg[3][3]
+         U1/Reg_File_reg[0][0]
+         U1/Reg_File_reg[1][6]
+         U1/Reg_File_reg[1][5]
+         U1/Reg_File_reg[0][1]
+         U1/Reg_File_reg[0][7]
+         U1/Reg_File_reg[0][6]
+         U1/Reg_File_reg[1][7]
+         U1/Reg_File_reg[1][4]
+         U1/Reg_File_reg[1][1]
+         U1/Reg_File_reg[1][0]
+         U1/Reg_File_reg[2][6]
+         U1/Reg_File_reg[2][5]
+         U1/Reg_File_reg[2][1]
+         U1/RdData_Valid_reg
+         U1/Reg_File_reg[0][4]
+         U1/Reg_File_reg[0][5]
+         U1/Reg_File_reg[0][2]
+         U1/Reg_File_reg[0][3]
+         U2/ALU_Valid_reg
+         U2/ALU_OUT_reg[8]
+         U2/ALU_OUT_reg[1]
+         U2/ALU_OUT_reg[14]
+         U2/ALU_OUT_reg[12]
+         U2/ALU_OUT_reg[10]
+         U2/ALU_OUT_reg[15]
+         U2/ALU_OUT_reg[13]
+         U2/ALU_OUT_reg[11]
+         U2/ALU_OUT_reg[9]
+         U2/ALU_OUT_reg[5]
+         U2/ALU_OUT_reg[3]
+         U2/ALU_OUT_reg[6]
+         U2/ALU_OUT_reg[4]
+         U2/ALU_OUT_reg[2]
+         U2/ALU_OUT_reg[7]
+         U2/ALU_OUT_reg[0]
+         U5/Q_reg[0]
+         U5/SYNC_RST_reg
+         U5/Q_reg[1]
+         U6/Q_reg[0]
+         U6/SYNC_RST_reg
+         U6/Q_reg[1]
+         U7/Q_reg[1]
+         U7/Q_reg[0]
+         U10/flag_reg
+         U10/counter_reg[7]
+         U10/counter_reg[5]
+         U10/counter_reg[0]
+         U10/counter_reg[1]
+         U10/div_clk_reg
+         U10/counter_reg[6]
+         U10/counter_reg[4]
+         U10/counter_reg[3]
+         U10/counter_reg[2]
+         U11/flag_reg
+         U11/counter_reg[7]
+         U11/counter_reg[6]
+         U11/counter_reg[5]
+         U11/counter_reg[4]
+         U11/counter_reg[3]
+         U11/counter_reg[2]
+         U11/div_clk_reg
+         U11/counter_reg[1]
+         U11/counter_reg[0]
+         du/enable_pulse_reg
+         du/Q_reg[0]
+         du/sync_bus_reg[5]
+         du/sync_bus_reg[2]
+         du/sync_bus_reg[6]
+         du/pulse_ff_reg
+         du/sync_bus_reg[7]
+         du/sync_bus_reg[0]
+         du/sync_bus_reg[1]
+         du/sync_bus_reg[3]
+         du/sync_bus_reg[4]
+         du/Q_reg[1]
+         U4/dut0/TX_OUT_reg
+         U8/U0/mem_reg[4][7]
+         U8/U0/mem_reg[4][6]
+         U8/U0/mem_reg[4][5]
+         U8/U0/mem_reg[4][4]
+         U8/U0/mem_reg[4][3]
+         U8/U0/mem_reg[4][2]
+         U8/U0/mem_reg[4][1]
+         U8/U0/mem_reg[4][0]
+         U8/U0/mem_reg[7][7]
+         U8/U0/mem_reg[7][6]
+         U8/U0/mem_reg[7][5]
+         U8/U0/mem_reg[7][4]
+         U8/U0/mem_reg[7][3]
+         U8/U0/mem_reg[7][2]
+         U8/U0/mem_reg[7][1]
+         U8/U0/mem_reg[7][0]
+         U8/U0/mem_reg[6][7]
+         U8/U0/mem_reg[6][6]
+         U8/U0/mem_reg[6][5]
+         U8/U0/mem_reg[6][4]
+         U8/U0/mem_reg[6][3]
+         U8/U0/mem_reg[6][2]
+         U8/U0/mem_reg[6][1]
+         U8/U0/mem_reg[6][0]
+         U8/U0/mem_reg[5][7]
+         U8/U0/mem_reg[5][6]
+         U8/U0/mem_reg[5][5]
+         U8/U0/mem_reg[5][4]
+         U8/U0/mem_reg[5][3]
+         U8/U0/mem_reg[5][2]
+         U8/U0/mem_reg[5][1]
+         U8/U0/mem_reg[5][0]
+         U8/U0/mem_reg[3][7]
+         U8/U0/mem_reg[3][6]
+         U8/U0/mem_reg[3][5]
+         U8/U0/mem_reg[3][4]
+         U8/U0/mem_reg[3][3]
+         U8/U0/mem_reg[3][2]
+         U8/U0/mem_reg[3][1]
+         U8/U0/mem_reg[3][0]
+         U8/U0/mem_reg[2][7]
+         U8/U0/mem_reg[2][6]
+         U8/U0/mem_reg[2][5]
+         U8/U0/mem_reg[2][4]
+         U8/U0/mem_reg[2][3]
+         U8/U0/mem_reg[2][2]
+         U8/U0/mem_reg[2][1]
+         U8/U0/mem_reg[2][0]
+         U8/U0/mem_reg[1][7]
+         U8/U0/mem_reg[1][6]
+         U8/U0/mem_reg[1][5]
+         U8/U0/mem_reg[1][4]
+         U8/U0/mem_reg[1][3]
+         U8/U0/mem_reg[1][2]
+         U8/U0/mem_reg[1][1]
+         U8/U0/mem_reg[1][0]
+         U8/U0/mem_reg[0][5]
+         U8/U0/mem_reg[0][4]
+         U8/U0/mem_reg[0][3]
+         U8/U0/mem_reg[0][2]
+         U8/U0/mem_reg[0][1]
+         U8/U0/mem_reg[0][0]
+         U8/U0/mem_reg[0][7]
+         U8/U0/mem_reg[0][6]
+         U8/D0/Q_reg[3]
+         U8/D0/Q_reg[2]
+         U8/D0/Q_reg[1]
+         U8/D0/Q_reg[0]
+         U8/D0/OUT_reg[0]
+         U8/D0/OUT_reg[2]
+         U8/D0/OUT_reg[1]
+         U8/D0/OUT_reg[3]
+         U8/D1/Q_reg[3]
+         U8/D1/Q_reg[2]
+         U8/D1/Q_reg[1]
+         U8/D1/Q_reg[0]
+         U8/D1/OUT_reg[3]
+         U8/D1/OUT_reg[2]
+         U8/D1/OUT_reg[1]
+         U8/D1/OUT_reg[0]
+         U8/U1/W_PTR_reg[3]
+         U8/U1/w_gray_out_reg[3]
+         U8/U1/w_gray_out_reg[2]
+         U8/U1/w_gray_out_reg[1]
+         U8/U1/w_gray_out_reg[0]
+         U8/U1/W_PTR_reg[1]
+         U8/U1/W_PTR_reg[0]
+         U8/U1/W_PTR_reg[2]
+         U8/U2/r_gray_out_reg[3]
+         U8/U2/r_gray_out_reg[0]
+         U8/U2/r_gray_out_reg[1]
+         U8/U2/r_gray_out_reg[2]
+         U8/U2/R_PTR_reg[3]
+         U8/U2/R_PTR_reg[1]
+         U8/U2/R_PTR_reg[0]
+         U8/U2/R_PTR_reg[2]
+         U4/dut0/S/counter_reg[2]
+         U4/dut0/S/counter_reg[3]
+         U4/dut0/S/ser_data_reg
+         U4/dut0/S/mem_reg[4]
+         U4/dut0/S/mem_reg[0]
+         U4/dut0/S/mem_reg[6]
+         U4/dut0/S/mem_reg[5]
+         U4/dut0/S/mem_reg[2]
+         U4/dut0/S/mem_reg[1]
+         U4/dut0/S/mem_reg[7]
+         U4/dut0/S/mem_reg[3]
+         U4/dut0/S/counter_reg[1]
+         U4/dut0/S/counter_reg[0]
+         U4/dut0/F/current_state_reg[0]
+         U4/dut0/F/busy_reg
+         U4/dut0/F/current_state_reg[2]
+         U4/dut0/F/current_state_reg[1]
+         U4/dut0/P/PAR_BIT_reg
+         U4/dut1/F/current_state_reg[1]
+         U4/dut1/F/current_state_reg[2]
+         U4/dut1/F/current_state_reg[0]
+         U4/dut1/D0/sample3_reg
+         U4/dut1/D0/sample1_reg
+         U4/dut1/D0/sample2_reg
+         U4/dut1/D1/counter_reg[2]
+         U4/dut1/D1/P_DATA_reg[6]
+         U4/dut1/D1/P_DATA_reg[7]
+         U4/dut1/D1/P_DATA_reg[2]
+         U4/dut1/D1/P_DATA_reg[3]
+         U4/dut1/D1/P_DATA_reg[4]
+         U4/dut1/D1/P_DATA_reg[5]
+         U4/dut1/D1/P_DATA_reg[0]
+         U4/dut1/D1/P_DATA_reg[1]
+         U4/dut1/D1/counter_reg[0]
+         U4/dut1/D1/counter_reg[1]
+         U4/dut1/E/BIT_CNT_reg[3]
+         U4/dut1/E/EDGE_CNT_reg[3]
+         U4/dut1/E/EDGE_CNT_reg[1]
+         U4/dut1/E/EDGE_CNT_reg[2]
+         U4/dut1/E/BIT_CNT_reg[1]
+         U4/dut1/E/EDGE_CNT_reg[4]
+         U4/dut1/E/BIT_CNT_reg[2]
+         U4/dut1/E/BIT_CNT_reg[0]
+         U4/dut1/E/EDGE_CNT_reg[0]
+         U4/dut1/P/PAR_ERR_reg
+         U4/dut1/S0/STRT_GLITCH_reg
+         U4/dut1/S1/STP_ERR_reg
+
+....Inferring feed-through connections....
+Information: Test design rule checking completed. (TEST-123)
+  Running test coverage estimation...
+ 16290 faults were added to fault list.
+ 0            7155   4795         1/0/0    69.89%      0.01
+ 0            1603   3192         1/0/0    79.82%      0.01
+ 0             710   2479         3/0/0    84.23%      0.01
+ 0             581   1894         6/0/0    87.85%      0.02
+ 0             395   1493         9/0/1    90.33%      0.02
+ 0             239   1245        17/0/2    91.87%      0.03
+ 0             225   1012        24/0/3    93.31%      0.03
+ 0             177    823        33/0/3    94.48%      0.03
+ 0             145    668        40/0/3    95.44%      0.03
+ 0             116    539        50/0/4    96.23%      0.04
+ 0             109    404        70/0/4    97.07%      0.04
+ 0              86    301        80/0/4    97.71%      0.04
+ 0              68    213        92/1/4    98.24%      0.04
+ 0              52    135       107/1/4    98.73%      0.04
+ 0              43     86       112/1/4    99.03%      0.05
+ 0              31     10       131/1/5    99.51%      0.05
+ 
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                           0
+ -----------------------------------------------
+ 
+
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT      15862
+ Possibly detected                PT          1
+ Undetectable                     UD        349
+ ATPG untestable                  AU         69
+ Not detected                     ND          9
+ -----------------------------------------------
+ total faults                             16290
+ test coverage                            99.51%
+ -----------------------------------------------
+  Information: The test coverage above may be inferior
+               than the real test coverage with customized
+               protocol and test simulation library.
+1
+##################### Close Formality Setup file ###########################
+set_svf -off
+1
+#############################################################################
+# Write out Design after initial compile
+#############################################################################
+write_file -format verilog -hierarchy -output system.v
+Writing verilog file '/home/IC/Projects/dft/system.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 5 nets to module system_top_dft using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+write_file -format ddc -hierarchy -output system.ddc
+Writing ddc file 'system.ddc'.
+1
+write_sdc  -nosplit system.sdc
+1
+write_sdf           system.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/IC/Projects/dft/system.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+################# reporting #######################
+report_power -hierarchy > power.rpt
+report_area -hierarchy > area.rpt
+report_timing -max_paths 100 -delay_type max > setup.rpt
+report_timing -max_paths 100 -delay_type min > hold.rpt
+report_clock -attributes > clocks.rpt
+report_constraint -all_violators > constraints.rpt
+############################################################################
+# DFT Preparation Section
+############################################################################
+set flops_per_chain 100
+100
+set num_flops [sizeof_collection [all_registers -edge_triggered]]
+298
+set num_chains [expr $num_flops / $flops_per_chain + 1 ]
+3
+################# starting graphical user interface #######################
+gui_start
+Current design is 'system_top_dft'.
+dc_shell> dc_shell> dc_shell> 
