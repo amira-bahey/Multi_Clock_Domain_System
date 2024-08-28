@@ -2,10 +2,14 @@
 
 module ALU_tb();
   
- reg [15:0] A_tb,B_tb;
+parameter data_width=8;
+parameter out_width=16 ;
+  
+ reg [data_width-1:0] A_tb,B_tb;
  reg [3:0] ALU_FUN_tb;
- reg CLK_tb;
- wire [15:0] ALU_OUT_tb;
+ reg CLK_tb, RST_tb, En_tb;
+ wire [out_width-1:0] ALU_OUT_tb;
+ wire ALU_Valid_tb; 
  wire Arith_Flag_tb,Logic_Flag_tb,CMP_Flag_tb,Shift_Flag_tb;
  
  initial
@@ -16,7 +20,8 @@ module ALU_tb();
    CLK_tb=1'b0;
    A_tb=16'd15;
    B_tb=16'd3;
-   
+   RST_tb=1;
+    
    $display("testcase1");
    #10
    ALU_FUN_tb=4'b0000;
@@ -217,16 +222,19 @@ module ALU_tb();
   
  always #5 CLK_tb =~ CLK_tb;
  
- ALU DUT(
+  ALU #(.data_width(data_width) ,.out_width(out_width)) DUT(
  .A(A_tb),
  .B(B_tb),
  .ALU_FUN(ALU_FUN_tb),
  .CLK(CLK_tb),
+ .RST(RST_tb),  
+ .En(En_tb),
  .ALU_OUT(ALU_OUT_tb),
  .Arith_Flag(Arith_Flag_tb),
  .Logic_Flag(Logic_Flag_tb),
  .CMP_Flag(CMP_Flag_tb),
- .Shift_Flag(Shift_Flag_tb)
+ .Shift_Flag(Shift_Flag_tb),
+ .ALU_Valid(ALU_Valid_tb)   
  );
   
 endmodule
