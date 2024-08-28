@@ -3,7 +3,6 @@
 module DATA_SYNC_tb();
  
  parameter clock_period=10;
- parameter NUM_STAGES_tb=2;
  parameter BUS_WIDTH_tb=8;
  
 reg [BUS_WIDTH_tb-1:0] unsync_bus_tb;
@@ -57,7 +56,7 @@ initial
  task source_enable;
   begin
    bus_enable_tb='b1;
-   #((NUM_STAGES_tb+2)*clock_period)
+   #(4)*clock_period)
    bus_enable_tb='b0;
   end
  endtask   
@@ -77,7 +76,7 @@ initial
   endtask
 always #(clock_period/2) CLK_tb=~CLK_tb;
 
-DATA_SYNC #(.BUS_WIDTH(BUS_WIDTH_tb),.NUM_STAGES(NUM_STAGES_tb)) dut(
+data_synchronizer #(.BUS_WIDTH(BUS_WIDTH_tb)) dut(
 .unsync_bus(unsync_bus_tb),
 .bus_enable(bus_enable_tb),
 .CLK(CLK_tb),
